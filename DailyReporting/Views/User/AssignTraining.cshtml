@@ -1,0 +1,631 @@
+﻿@model DailyReporting.Models.Assigntrainingmodel
+@{
+    ViewBag.Title = "AssignTraining";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<style>
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i> Assign Training
+
+    </h1>
+</div>
+<div class="row">
+    <div class="col-xl-12 sortable-grid ui-sortable">
+        <div id="panel-1" class="panel panel-sortable" role="widget">
+            <div class="panel-hdr" role="heading">
+                <h2 class="ui-sortable-handle">
+                    Assign Training
+                </h2>
+
+                <div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-close waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></a></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-toolbar-master waves-effect waves-themed" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0"><a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Content</span></a> <a href="#" class="dropdown-item js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Position</span></a>  <div class="dropdown-multilevel dropdown-multilevel-left">											<div class="dropdown-item">												<span data-i18n="drpdwn.panelcolor">Panel Style</span>											</div>											<div class="dropdown-menu d-flex flex-wrap" style="min-width: 9.5rem; width: 9.5rem; padding: 0.5rem"><a href="#" class="btn d-inline-block bg-primary-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-500 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-500 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-600 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-600 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-primray-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-primray-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-700 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-700 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-600 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-600 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-danger-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-danger-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-fusion-400 bg-fusion-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-fusion-400 bg-fusion-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-faded width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-faded" style="margin:1px;"></a></div>										</div>  <div class="dropdown-divider m-0"></div><a href="#" class="dropdown-item js-panel-reset"><span data-i18n="drpdwn.resetpanel">Reset Panel</span></a></div></div>
+            </div>
+            <div class="panel-container show" role="content">
+                <div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>
+                <div class="row mb-3">
+
+                    <div class="col-md-12">
+                        @*<form action="/User/AssignTraining" method="get" id="myform1">
+
+                            </form>*@
+                        <form action="/User/AssignTraining" method="post" id="myform">
+
+                            <div class="panel-content">
+                                <div class="frame-wrap">
+                                    @{string confirmMessage = Convert.ToString(TempData["Message"]); string warningMessage = Convert.ToString(TempData["WarningMessage"]);}
+                                    @if (!string.IsNullOrEmpty(confirmMessage))
+                                    {
+                                        <div class="alert alert-success alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@confirmMessage" />
+                                            @confirmMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else if (!string.IsNullOrEmpty(warningMessage))
+                                    {
+                                        <div class="alert alert-warning alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@warningMessage" />
+                                            @warningMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <input type="hidden" id="messagealert" value="0" />
+                                    }
+
+
+                                </div>
+                                <div class="card p-3">
+                                    <div class="row mb-2">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Details of Training availed (Institution):</label>
+                                                @Html.DropDownListFor(x => x.TraingAssign.Tr_Institute_Id, (IEnumerable<SelectListItem>)ViewBag.traininginstitute, new { @class = "form-control", @Name = "Tr_Institute_Id", @id = "Instiid", @Onchange = "BindType()" })
+                                                @Html.HiddenFor(m => m.TraingAssign.Tr_Institute_Id, new { @id = "insid" })
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Type of Training undergone previously:</label>
+                                                @Html.DropDownListFor(x => x.TraingAssign.Traing_Type_Id, (IEnumerable<SelectListItem>)ViewBag.trainingType, new { @class = "form-control", @id = "typeid", @Disabled = "true", @Name = "Traing_Type_Id", @Onchange = "StoreType()" })
+                                                @Html.HiddenFor(m => m.TraingAssign.Traing_Type_Id, new { @id = "typeeeeid" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Year:</label>
+                                                <select name="year" id="year" class="form-control ">
+                                                    <option value="0">Select</option>
+                                                    @if (ViewBag.fiveyears != null)
+                                                    {
+                                                        if (ViewBag.fiveyears == "1")
+                                                        {
+                                                            <option value="1" selected>Less than 5 Years</option>
+                                                            <option value="2">Less than 10 Years</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="1">Less than 5 Years</option>
+                                                            <option value="2" selected>Less than 10 Years</option>
+                                                        }
+
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="1">Less than 5 Years</option>
+                                                        <option value="2">Less than 10 Years</option>
+                                                    }
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Designation:</label>
+
+                                                @Html.DropDownListFor(x => x.desgiddddd, (IEnumerable<SelectListItem>)ViewBag.designation, new { @class = "form-control", @id = "desgiddddd", @Name = "desgiddddd" })
+
+                                                @*<select name="designation" id="designation" class="form-control ">
+
+                                                        @if (ViewBag.designation != null)
+                                                        {
+                                                            foreach (var item in ViewBag.designation)
+                                                            {
+
+                                                                <option value="@item.Value">@item.Text</option>
+                                                            }
+                                                        }
+                                                    </select>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Whether agreed for Training:</label>
+                                                <select class="form-control" disabled>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Priviously Training Taken:</label>
+                                                <select class="form-control" name="TRTaken">
+                                                    @if (ViewBag.trtaken != null)
+                                                    {
+                                                        if (ViewBag.trtaken == "Yes")
+                                                        {
+                                                            <option value="Yes" selected>Yes</option>
+                                                            <option value="No">No</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No" selected>No</option>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="Yes">Yes</option>
+                                                        <option value="No">No</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <a href="/User/AssignTraining"><button type="button" class="btn btn-warning waves-effect waves-themed" style="float:right;">Cancel</button></a>
+                                            <button type="submit" name="btn" id="btnSubmit" class="btn btn-primary waves-effect waves-themed" style="float:right; margin-right:12px;" value="search">Search</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                @*<div class="card p-3">
+                                    <div class="row">
+                                        <input class="searchType" type="checkbox" name="emailNotification" id="emailNotification"><label class="searchtype1label">Those who were not take any training</label></input>
+                                    </div>
+                                    </div>*@
+                                <div class="card p-3">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div id="panel-1" class="panel">
+
+                                                <div class="panel-hdr">
+                                                    <h2>
+                                                        Employee Details <span class="fw-300"><i>List</i></span>
+                                                    </h2>
+                                                </div>
+                                                <div class="panel-container show">
+                                                    <div class="panel-content">
+                                                        <!-- datatable start -->
+                                                        <div class="table-responsive">
+                                                            <table id="example2" class="table table-striped table-bordered">
+                                                                <thead class="bg-info-700">
+                                                                    <tr>
+                                                                        <th><input type="checkbox" id="check" onclick="selectitem()" /> Select</th>
+                                                                        <th>Employee Name</th>
+                                                                        <th>Employee Email ID</th>
+                                                                        <th>Designation</th>
+                                                                        <th>Retirement Date</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (ViewBag.Empname != null)
+                                                                    {
+                                                                        int data = 0;
+                                                                        foreach (var item in ViewBag.Empname)
+                                                                        {
+                                                                            if (data != item.Tas_Id)
+                                                                            {
+                                                                                <tr id="@item.Tas_Id">
+                                                                                    <td>
+                                                                                        <input type="checkbox" class="checkall" name="reqid" id="check_@item.Tas_Id" onclick="binddata(@item.Tas_Id)" />
+                                                                                        <input type="hidden" class="sss" name="Appid" value="@item.UserId" disabled id="applicationid_@item.Tas_Id" />
+                                                                                        <input type="hidden" class="Tasid" name="Taasid" value="@item.Tas_Id" disabled id="Tasid_@item.Tas_Id" />
+
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        @item.Emp_Name
+                                                                                        <input type="hidden" class="Emp_Name" name="Emp_Name" value="@item.Emp_Name" disabled id="Emp_Name_@item.Tas_Id" />
+                                                                                    </td>
+
+                                                                                    <td>
+                                                                                        @item.email
+                                                                                        <input type="hidden" class="Emp_Name" name="email" value="@item.email" disabled id="email_@item.Tas_Id" />
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        @item.desgnation
+                                                                                        <input type="hidden" class="Emp_Name" name="designation" value="@item.desgnation" disabled id="designation_@item.Tas_Id" />
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        @item.Retirement_Date.ToString("dd-MM-yyyy")
+                                                                                        <input type="hidden" class="Emp_Name" name="rtdate" value="@item.Retirement_Date.ToString("dd-MM-yyyy")" disabled id="rtdate_@item.Tas_Id" />
+                                                                                    </td>
+                                                                                </tr>
+                                                                            }
+
+
+                                                                            data = item.Tas_Id;
+                                                                        }
+                                                                    }
+
+
+                                                                </tbody>
+
+                                                            </table>
+                                                        </div>
+
+                                                        <!-- datatable end -->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card p-3">
+                                    <div class="panel-container show" id="listhide">
+                                        <div class="panel-content">
+                                            <!-- datatable start -->
+                                            <div class="table-responsive">
+                                                <table id="" class="table table-striped table-bordered">
+                                                    <thead class="bg-info-700">
+                                                        <tr>
+                                                            <th>Employee Name</th>
+                                                            <th>Employee Email ID</th>
+                                                            <th>Designation</th>
+                                                            <th>Retirement Date</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="AssignList"></tbody>
+
+                                                </table>
+                                            </div>
+
+                                            <!-- datatable end -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card p-3">
+                                    <div class="row mb-2">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Training From Date:</label>
+                                                @Html.TextBoxFor(x => x.TraingAssign.Trfdate, new { @class = "form-control", @Type = "Date", @name = "Trfdate", @id = "Trfdate" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Training To Date:</label>
+                                                @Html.TextBoxFor(x => x.TraingAssign.Trtdate, new { @class = "form-control", @Type = "Date", @name = "Trtdate", @id = "Trtdate",@onchange= "Datevalidation()" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">Remarks:</label>
+                                                @Html.TextAreaFor(x => x.TraingAssign.Remarks, new { @class = "form-control", @name = "Remarks", @id = "Remarks" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card p-3">
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-warning waves-effect waves-themed" style="float:right;" onclick="location.reload()">Cancel</button>
+                                            <button type="submit" id="SubmitBtn" name="btn" class="btn btn-primary waves-effect waves-themed" style="float:right;margin-right:12px;" value="submit">Submit</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#listhide').hide();
+    });
+</script>
+
+<script>
+    function BindType() {
+        debugger;
+        var state = $('#Instiid').val();
+        //var statecount = $('#traininginstitute' + count).val();
+        count = 0;
+        debugger;
+        if (count == 0) {
+
+            $.ajax({
+                type: "post",
+                url: "/USer/Traintype",
+                data: { cccc: state },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    var district = "<select id='typeid'class='form-control'>";
+                    district = district + '<option value="">--Select--</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        district = district + '<option value=' + data[i].Value + '>' + data[i].Text + '</option>';
+                    }
+                    district = district + '</select>';
+
+                    if (count == 0) {
+
+                        $("#insid").val(state);
+                        $("#typeid").html(district);
+
+
+                        $("#typeid").prop("disabled", false);
+
+                    }
+                    else {
+
+                        $("#typeid" + count).html(district);
+
+                    }
+
+                    /* $("#pblockdrop").val('1');*/
+                }
+            });
+        }
+
+    }
+
+    function StoreType() {
+        var data = $("#typeid").val();
+        $("#typeeeeid").val(data);
+    }
+</script>
+<script>
+
+    //var table = $('#example2').DataTable();
+
+    //$("form").on('submit', function (e) {
+    //    var $form = $(this);
+
+    //    // Iterate over all checkboxes in the table
+    //    table.$('input[type="checkbox"]').each(function () {
+    //        // If checkbox doesn't exist in DOM
+    //        if (!$.contains(document, this)) {
+    //            // If checkbox is checked
+    //            if (this.checked) {
+    //                // Create a hidden element
+    //                $form.append(
+    //                    $('<input>')
+    //                        .attr('type', 'hidden')
+    //                        .attr('name', this.name)
+    //                        .val(this.value)
+    //                );
+    //            }
+    //        }
+    //    });
+    //});
+
+
+
+
+
+
+    $("#SubmitBtn").click(function () {
+        debugger;
+        var tbl = $('#example2').DataTable();
+        var selectedIds = tbl.columns().reqid.selected()[0];
+        console.log(selectedIds)
+
+        selectedIds.forEach(function (selectedId) {
+            alert(selectedId);
+        });
+    });
+
+
+
+    //function getSelected() {
+    //    debugger;
+    //    //var tbl = $('#example2').DataTable();
+    //    var tbl = $('#example2').DataTable();
+    //    var selectedIds = tbl.columns().checkboxes.selected()[0];
+    //    console.log(selectedIds)
+
+    //    selectedIds.forEach(function (selectedId) {
+    //        alert(selectedId);
+    //    });
+    //}
+
+
+
+    function binddata(id) {
+        debugger;
+        $("#listhide").show();
+        var data = $("#check_" + id);
+        if (data[0].checked == true) {
+            var applicationid = $("#applicationid_" + id).val();
+            var Tasid = $("#Tasid_" + id).val();
+            var Emp_Name = $("#Emp_Name_" + id).val();
+            var email = $("#email_" + id).val();
+            var designation = $("#designation_" + id).val();
+            var rtdate = $("#rtdate_" + id).val();
+
+
+            var data = '<tr id="tr_' + id + '">';
+            data += '<td><input type="hidden" name="Applicationid" value="' + applicationid + '"/><input type="hidden" name="Tasid" value="' + Tasid + '"/>' + Emp_Name + '</td>';
+            data += '<td>' + email + '</td>';
+            data += '<td>' + designation + '</td>';
+            data += '<td>' + rtdate + '</td>';
+            data += '<td><button class="btn btn-danger" onclick="remove(' + id + ')" >X</button></td>';
+
+            $("#AssignList").append(data);
+        }
+        else {
+            $("#tr_" + id).remove();
+        }
+    }
+    function remove(id) {
+
+        if (confirm("Are you sure want to remove this record?"))
+            $("#tr_" + id).remove();
+
+        $("#check_" + id).prop("checked", false);
+    }
+
+    function selectitem() {
+        debugger;
+        var data = $("#check");
+        if (data[0].checked == true) {
+            $(".checkall").prop("checked", true);
+            $(".sss").prop("disabled", false);
+
+            $(".Tasid").prop("disabled", false);
+            $(".Emp_Name").prop("disabled", false);
+        }
+        else {
+
+            $(".checkall").prop("checked", false);
+            $(".sss").prop("disabled", true);
+
+            $(".Tasid").prop("disabled", true);
+            $(".Emp_Name").prop("disabled", true);
+
+        }
+    }
+
+    $("#btnSubmit").click(function () {
+        debugger;
+        var count = 0;
+        var Instiid = $("#Instiid").val();
+        var typeid = $("#typeid").val();
+        var year = $("#year").val();
+
+        if (Instiid == 0) {
+            $('#Instiid').next("label").remove();
+            $('#Instiid').after('<label class="error mt-2 text-danger1 ">Please Select Training Institue</label>');
+            $("#Instiid").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#Instiid').next("label").remove();
+        }
+        if (typeid == 0) {
+            $('#typeid').next("label").remove();
+            $('#typeid').after('<label class="error mt-2 text-danger1 ">Please Select Training Type</label>');
+            $("#typeid").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#typeid').next("label").remove();
+        }
+        if (year == 0) {
+            $('#year').next("label").remove();
+            $('#year').after('<label class="error mt-2 text-danger1 ">Please Select Year</label>');
+            $("#year").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#year').next("label").remove();
+        }
+
+    });
+
+    $("#SubmitBtn").click(function () {
+        var count = 0;
+        var Trfdate = $("#Trfdate").val();
+        var Trtdate = $("#Trtdate").val();
+
+        if (Trfdate == "") {
+            $('#Trfdate').next("label").remove();
+            $('#Trfdate').after('<label class="error mt-2 text-danger1 ">Please Enter From Date</label>');
+            $("#Trfdate").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#Trfdate').next("label").remove();
+        }
+        if (Trtdate == "") {
+            $('#Trtdate').next("label").remove();
+            $('#Trtdate').after('<label class="error mt-2 text-danger1 ">Please Enter To Date</label>');
+            $("#Trtdate").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#Trtdate').next("label").remove();
+        }
+
+    });
+</script>
+
+
+<script>
+    var Instiid = $("#Instiid").val();
+    var typeid = $("#typeid").val();
+    $('.searchType').click(function () {
+        alert($(this).attr('id'));  //-->this will alert id of checked checkbox.
+        if (this.checked) {
+            $.ajax({
+                type: "POST",
+                url: '/USer/Traintype',
+                data: {}, //--> send id of checked checkbox on other page
+                success: function (data) {
+                    alert('it worked');
+                    alert(data);
+                    $('#example2').html(data);
+                },
+                error: function () {
+                    alert('it broke');
+                },
+                complete: function () {
+                    alert('it completed');
+                }
+            });
+
+        }
+    });
+
+    function Datevalidation() {
+        var from = $("#Trfdate").val();
+        var to = $("#Trtdate").val();
+
+        if (Date.parse(from) > Date.parse(to)) {
+            alert("End date must be after start date");
+            $("#Trfdate").val();
+            $("#Trtdate").val('');
+        }
+        else {
+            $("#Trfdate").val();
+            $("#Trtdate").val();
+        }
+    }
+    
+</script>

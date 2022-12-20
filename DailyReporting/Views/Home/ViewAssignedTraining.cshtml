@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "ViewAssignedTraining";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i>View Assigned Training
+
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+
+            <div class="panel-hdr">
+                <h2>
+                    Training Details <span class="fw-300"><i>List</i></span>
+                </h2>
+            </div>
+            <div class="panel-container show">
+                <div class="panel-content">
+                    <!-- datatable start -->
+                    <div class="table-responsive">
+                        <table id="example2" class="table table-striped table-bordered table-responsive">
+                            <thead class="bg-info-700">
+                                <tr>
+                                    <th>Sl. No</th>
+                                    @*<th style="width: 150px;">Employee Name</th>*@
+                                    <th>Training Institute Name</th>
+                                    <th>Training Programme Name</th>
+                                    <th style="width: 70px;">From Date</th>
+                                    <th style="width: 70px;">To Date</th>
+                                    <th style="width: 150px;">Remarks</th>
+                                    <th style="width: 70px;">View Selected Employee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ int count = 0;}
+                                @if (ViewBag.AdminTrAssgn != null)
+                                {
+                                    foreach (var iteam in ViewBag.AdminTrAssgn)
+                                    {
+                                        count = count + 1;
+                                        <tr>
+                                            <td>@count</td>
+                                            @*<td class="sorting_1">@iteam.FirstName</td>*@
+                                            <td class="sorting_1">@iteam.Tr_Institute_Name</td>
+                                            <td class="sorting_1">@iteam.Traing_Name</td>
+                                            <td class="sorting_1">@iteam.Trfdate</td>
+                                            <td class="sorting_1">@iteam.Trtdate</td>
+                                            <td class="sorting_1">@iteam.Remarks</td>
+                                            <td>
+                                                <div class="btn-group">
+
+                                                    <a href="/Home/ViewAssignedTrainingDeatilss/@iteam.Tr_AssignID" class="btn btn-outline-primary waves-effect waves-light m-1 btn1 btn-sm" > <i class="fal fa-eye"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- datatable end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+
+<script type="text/javascript">
+
+    function ViewApplication(id) {
+        debugger;
+        $.ajax({
+            type: "post",
+            url: "/Home/ViewAssignedTrainingDeatilss",
+            data: { id: id },
+            dataType: "html",
+        })
+        success: (function (app) {
+            debugger;
+            //$(".gtiyt").html(app);
+            $("#xx").html(app);
+        });
+    }
+
+
+</script>

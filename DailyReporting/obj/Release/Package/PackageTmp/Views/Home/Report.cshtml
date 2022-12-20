@@ -1,0 +1,227 @@
+﻿@model DailyReporting.Models.ExciseReportModel
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Report</h2>
+
+
+
+<style>
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i>ExciseInformation Report
+
+    </h1>
+</div>
+<div class="row">
+    <div class="col-xl-12 sortable-grid ui-sortable">
+        <div id="panel-1" class="panel panel-sortable" role="widget">
+            <div class="panel-hdr" role="heading">
+                <h2 class="ui-sortable-handle">
+                    ExciseInformation Report
+                </h2>
+
+                <div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-close waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></a></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-toolbar-master waves-effect waves-themed" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0"><a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Content</span></a> <a href="#" class="dropdown-item js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Position</span></a>  <div class="dropdown-multilevel dropdown-multilevel-left">											<div class="dropdown-item">												<span data-i18n="drpdwn.panelcolor">Panel Style</span>											</div>											<div class="dropdown-menu d-flex flex-wrap" style="min-width: 9.5rem; width: 9.5rem; padding: 0.5rem"><a href="#" class="btn d-inline-block bg-primary-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-500 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-500 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-600 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-600 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-primray-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-primray-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-700 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-700 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-600 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-600 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-danger-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-danger-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-fusion-400 bg-fusion-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-fusion-400 bg-fusion-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-faded width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-faded" style="margin:1px;"></a></div>										</div>  <div class="dropdown-divider m-0"></div><a href="#" class="dropdown-item js-panel-reset"><span data-i18n="drpdwn.resetpanel">Reset Panel</span></a></div></div>
+            </div>
+            <div class="panel-container show" role="content">
+                <div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>
+                <div class="row mb-3">
+
+                    <div class="col-md-12">
+                        <form action="/Home/Report" method="post" id="myform">
+
+                            <div class="panel-content">
+                                <div class="frame-wrap">
+                                    @{string confirmMessage = Convert.ToString(TempData["MngUserMessage"]); string warningMessage = Convert.ToString(TempData["WarningMessage"]);}
+                                    @if (!string.IsNullOrEmpty(confirmMessage))
+                                    {
+                                        <div class="alert alert-success alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@confirmMessage" />
+                                            @confirmMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else if (!string.IsNullOrEmpty(warningMessage))
+                                    {
+                                        <div class="alert alert-warning alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@warningMessage" />
+                                            @warningMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <input type="hidden" id="messagealert" value="0" />
+                                    }
+                                    <div class="card p-3">
+                                        <div class="row mb-2">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="example-select">Section Type :</label>
+
+                                                    @Html.DropDownListFor(x => x.Section_Id, (IEnumerable<SelectListItem>)ViewBag.Section, new { @class = "form-control", @id = "Section_Id" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="example-email-2">Current Status: </label>
+                                                    <select class="form-control" name="Report">
+                                                        <option value="NA">Select All</option>
+                                                        <option value="Dispose">Disposed</option>
+                                                        <option value="Transit">Transit</option>
+                                                        <option value="Pending">Pending</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <a href="/Home/Report"><button type="button" class="btn btn-warning waves-effect waves-themed" style="float:right;">Cancel</button></a>
+                                                <button type="submit" class="btn btn-primary waves-effect waves-themed" style="float:right;margin-right:12px;">Search</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+
+            <div class="panel-hdr">
+                <h2>
+                    Excise Information <span class="fw-300"><i>List</i></span>
+                </h2>
+            </div>
+
+            <div class="panel-container show">
+                <div class="panel-content">
+                    <!-- datatable start -->
+                    <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+                        <thead>
+                            <tr role="row">
+                                <th>Sl No</th>
+                                <th>Section Type</th>
+                                <th>Dak No</th>
+                                <th>Dak Date</th>
+                                <th>Received From</th>
+                                <th>Subject Matter</th>
+                                <th>Date of Receipt of DAK at Dairy Section</th>
+                                <th>Date of Receipt of the letter in the Section</th>
+                                <th>Date of Put-up</th>
+                                <th>Put-up file Number</th>
+                                <th>Disposal Date</th>
+                                <th> Number of Days for Disposal </th>
+                                <th>Current Status</th>
+                                <th>Number of Days Pending</th>
+                                <th>Remark For Non_Disposal</th>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.data != null)
+                            {
+                                int count = 0;
+                                foreach (var item in ViewBag.data)
+                                {
+                                    count = count + 1;
+                            <tr>
+                                <td>@count</td>
+                                <td>@item.Section_Name</td>
+                                <td>@item.Dak_No</td>
+                                <td>@item.Dak_Date.ToShortDateString()</td>
+                                <td>@item.Receive_from</td>
+                                <td>@item.Subject_Matter</td>
+                                <td>@item.Dor_At_Dairy_Section.ToShortDateString()</td>
+                                <td>@item.Dor_Offer_Section.ToShortDateString()</td>
+
+
+                                @if (@item.Date_Put_up != null)
+                                {
+                                    <td>
+                                        @item.Date_Put_up.ToShortDateString()
+                                    </td>}
+                                else
+                                {
+                                    <td>
+                                        NA
+                                    </td>
+                                }
+
+
+
+
+
+
+                                <td>@item.Put_Up_File_no</td>
+                                @if (@item.Disposal_date != null)
+                                {
+                                    <td>
+                                        @item.Disposal_date.ToShortDateString()
+                                    </td>}
+                                else
+                                {
+                                    <td>
+                                        NA
+                                    </td>
+                                }
+                                <td>@item.No_Days_for_Disposal</td>
+                                <td>@item.Current_Status</td>
+                                <td>@item.No_of_Days_Pending</td>
+                                <td>@item.Remarks_Of_Non_Disposal</td>
+
+                            </tr>
+
+                                }
+                            }
+
+                        </tbody>
+
+                    </table>
+                    <!-- datatable end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

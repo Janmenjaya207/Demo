@@ -1,0 +1,414 @@
+﻿
+@{
+    ViewBag.Title = "AdminReport";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2></h2>
+
+
+<style>
+    .bg-info-700 th {
+        color: white;
+    }
+
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i> Admin Report
+
+    </h1>
+</div>
+<div class="row">
+    <div class="col-xl-12 sortable-grid ui-sortable">
+        <div id="panel-1" class="panel panel-sortable" role="widget">
+            <div class="panel-hdr" role="heading">
+                <h2 class="ui-sortable-handle">
+                    Admin Report
+                </h2>
+
+                <div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-close waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></a></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-toolbar-master waves-effect waves-themed" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0"><a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Content</span></a> <a href="#" class="dropdown-item js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Position</span></a>  <div class="dropdown-multilevel dropdown-multilevel-left">											<div class="dropdown-item">												<span data-i18n="drpdwn.panelcolor">Panel Style</span>											</div>											<div class="dropdown-menu d-flex flex-wrap" style="min-width: 9.5rem; width: 9.5rem; padding: 0.5rem"><a href="#" class="btn d-inline-block bg-primary-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-500 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-500 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-600 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-600 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-primray-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-primray-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-700 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-700 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-600 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-600 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-danger-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-danger-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-fusion-400 bg-fusion-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-fusion-400 bg-fusion-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-faded width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-faded" style="margin:1px;"></a></div>										</div>  <div class="dropdown-divider m-0"></div><a href="#" class="dropdown-item js-panel-reset"><span data-i18n="drpdwn.resetpanel">Reset Panel</span></a></div></div>
+            </div>
+            <div class="panel-container show" role="content">
+                <div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>
+                <div class="row mb-3">
+
+                    <div class="col-md-12">
+                        <form action="/Home/AdminReport" method="post" id="myform">
+
+                            <div class="panel-content">
+                                <div class="frame-wrap">
+
+                                    <div class="card p-3">
+                                        <div class="row mb-2">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="example-select">Details of Training availed (Institution):</label>
+                                                    <select name="traininginstitute" id="traininginstitute" class="form-control " onchange="BindType()">
+                                                        @if (ViewBag.traininginstitute != null)
+                                                        {
+                                                            foreach (var item in ViewBag.traininginstitute)
+                                                            {
+
+                                                                <option value="@item.Value">@item.Text</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                    @*@Html.DropDownListFor(x=>x.m, (IEnumerable<SelectListItem>)ViewBag.kmsyr, new { @class = "form-control", @id = "kmsyid" })*@
+                                                    @*@Html.DropDownListFor(x => x.Tr_Institute_Id, (IEnumerable<SelectListItem>)ViewBag.traininginstitute, new { @class = "form-control", @id = "traininginstitute", @Onchange = "BindType()" })*@
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="form-label" for="example-select">Type of Training undergone previously:</label>
+                                                    <select name="trainingType" id="trainingType" class="form-control " disabled>
+                                                      
+                                                            @if (ViewBag.trainingType != null)
+                                                            {
+                                                                foreach (var item in ViewBag.trainingType)
+                                                                {
+
+                                                                    <option value="@item.Value">@item.Text</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                        @*@Html.DropDownListFor(x=>x.m, (IEnumerable<SelectListItem>)ViewBag.kmsyr, new { @class = "form-control", @id = "kmsyid" })*@
+                                                        @*@Html.DropDownListFor(x => x.Traing_Type_Id, (IEnumerable<SelectListItem>)ViewBag.trainingType, new { @class = "form-control", @id = "trainingType" })*@
+</div>
+                                            </div>
+
+                                            @*<div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">From Date:</label>
+                                                        <input type="date" id="fdate" name="fdate" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">To Date:</label>
+                                                        <input type="date" id="tdate" name="tdate" class="form-control" />
+                                                    </div>
+                                                </div>*@
+                                        </div>
+
+                                        <div class="row mt-2">
+                                            <div class="col-md-12">
+                                                <button type="button" class="btn btn-warning waves-effect waves-themed" style="float:right;" onclick="location.href='@Url.Action("AdminReport","Home")';">Cancel</button>
+                                                <button type="submit" class="btn btn-primary waves-effect waves-themed" style="float:right;margin-right:12px;" id="btnSubmit">Search</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+
+            <div class="panel-hdr">
+                <h2>
+                    Report  <span class="fw-300"><i>Details</i></span>
+                </h2>
+            </div>
+            @if (ViewBag.report == null)
+            {
+                <div class="card-body">
+                    <div id="FormOne">
+                        <div class="row">
+                            <div class="col-md-12">No data found.</div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="panel-container show">
+                    <div class="panel-content">
+                        <!-- datatable start -->
+                        <div class="table-responsive">
+                            <table id="example2" class="table table-striped table-bordered table-responsive">
+                                <thead class="bg-info-700">
+                                    <tr>
+                                        <th>Sl No.</th>
+                                        <th>Name of the Employee</th>
+                                        <th>Designation</th>
+                                        <th>Present Post held </th>
+                                        <th>Educational Qualification</th>
+                                        <th>Date of Retirement </th>
+                                        <th>Previous assignment in Cooperative Sector</th>
+                                        <th>Type of Training undergone previously </th>
+                                        <th>Details of Training availed (Institution)</th>
+                                        <th>Details of Training Year</th>
+                                        <th>Details of Training Days</th>
+                                        <th>Willingness of the employee (whether agreed for Training)</th>
+                                        <th>Option of field where training intended	</th>
+                                        <th>Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @{ int count = 0;
+                                        var id = 0;
+                                    }
+
+                                    @foreach (var item in ViewBag.report)
+                                    {
+                                        if (count == 0)
+                                        {
+                                            id = item.Tas_Id;
+                                            count = count + 1;
+                                            <tr role="row" class="even">
+                                                <td>@count</td>
+                                                <td>@item.Emp_Name</td>
+
+                                                <td>@item.DesgName</td>
+                                                <td>@item.Present_Post</td>
+
+                                                <td>@item.Edu_Qualification</td>
+                                                <td>@item.Retirement_Date</td>
+                                                <td>@item.Prv_Assignment</td>
+                                                @if (item.Traing_Name == null)
+                                                {
+                                                    item.Traing_Name = "NA";
+                                                    <td>@item.Traing_Name</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@item.Traing_Name</td>
+                                                }
+
+                                                @if (item.Tr_Institute_Name == null)
+                                                {
+                                                    item.Tr_Institute_Name = "NA";
+                                                    <td>@item.Tr_Institute_Name</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@item.Tr_Institute_Name</td>
+                                                }
+                                                @if (item.Year == 0)
+                                                {
+                                                    item.Year = 0;
+                                                    <td>@item.Year</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@item.Year</td>
+                                                }
+                                                @if (item.Days == null || item.Days==0)
+                                                {
+                                                    item.Days = 0;
+                                                    <td>@item.Days</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@item.Days</td>
+                                                }
+
+
+                                                <td>@item.Agreed_For_Training</td>
+                                                <td>@item.Tr_Intended_details</td>
+                                                <td>@item.Remarks</td>
+
+                                            </tr>
+                                        }
+                                        else
+                                        {
+                                            if (id == item.Tas_Id)
+                                            {
+
+                                                <tr role="row" class="even">
+                                                    <td>@count</td>
+                                                    <td></td>
+
+                                                    <td></td>
+                                                    <td></td>
+
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>@item.Traing_Name</td>
+
+                                                    <td>@item.Tr_Institute_Name</td>
+                                                    <td>@item.Year</td>
+                                                    <td>@item.Days</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                id = item.Tas_Id;
+                                                count = count + 1;
+                                                <tr role="row" class="even">
+                                                    <td>@count</td>
+                                                    <td>@item.Emp_Name</td>
+
+                                                    <td>@item.DesgName</td>
+                                                    <td>@item.Present_Post</td>
+
+                                                    <td>@item.Edu_Qualification</td>
+                                                    <td>@item.Retirement_Date</td>
+                                                    <td>@item.Prv_Assignment</td>
+                                                    @if (item.Traing_Name == null)
+                                                    {
+                                                        item.Traing_Name = "NA";
+                                                        <td>@item.Traing_Name</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@item.Traing_Name</td>
+                                                    }
+                                                    @if (item.Tr_Institute_Name == null)
+                                                    {
+                                                        item.Tr_Institute_Name = "NA";
+                                                        <td>@item.Tr_Institute_Name</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@item.Tr_Institute_Name</td>
+                                                    }
+                                                    @if (item.Year == 0)
+                                                    {
+                                                        item.Year = 0;
+                                                        <td>@item.Year</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@item.Year</td>
+                                                    }
+                                                    @if (item.Days == null)
+                                                    {
+                                                        item.Days = 0;
+                                                        <td>@item.Days</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@item.Days</td>
+                                                    }
+
+                                                    <td>@item.Agreed_For_Training</td>
+                                                    <td>@item.Tr_Intended_details</td>
+                                                    <td>@item.Remarks</td>
+
+                                                </tr>
+                                            }
+
+                                        }
+
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                        <!-- datatable end -->
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    function BindType() {
+        debugger;
+        var state = $('#traininginstitute').val();
+        //var statecount = $('#traininginstitute' + count).val();
+        count = 0;
+        debugger;
+        if (count == 0) {
+
+            $.ajax({
+                type: "post",
+                url: "/USer/Traintype",
+                //data: { stateId: $('#AreaId').val() },
+
+                data: { cccc: state },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    var district = "<select id='pblock'class='form-control'>";
+                    district = district + '<option value="">--Select--</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        district = district + '<option value=' + data[i].Value + '>' + data[i].Text + '</option>';
+                    }
+                    district = district + '</select>';
+
+                    if (count == 0) {
+                        $("#trainingType").html(district);
+                        $("#trainingType").prop("disabled", false);
+                    }
+                    else {
+                        $("#trainingType" + count).html(district);
+                    }
+
+                } /* $("#pblockdrop").val('1');*/
+
+            });
+        }
+    }
+
+    $("#btnSubmit").click(function () {
+        debugger;
+        var count = 0;
+
+        var traininginstitute = $("#traininginstitute").val();
+        var trainingType = $("#trainingType").val();
+
+        if (traininginstitute == 0) {
+            $('#traininginstitute').next("label").remove();
+            $('#traininginstitute').after('<label class="error mt-2 text-danger ">Please Select Training Institue</label>');
+            $("#traininginstitute").focus();
+            count = 1;
+            return false;
+        }
+        else {
+            $('#traininginstitute').next("label").remove();
+        }
+       
+    });
+
+
+
+</script>
+

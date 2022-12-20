@@ -1,0 +1,281 @@
+﻿@model DailyReporting.Models.Feedback
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i>Feedback
+
+    </h1>
+</div>
+<div class="row">
+    <div class="col-xl-12 sortable-grid ui-sortable">
+        <div id="panel-1" class="panel panel-sortable" role="widget">
+            <div class="panel-hdr" role="heading">
+                <h2 class="ui-sortable-handle">
+                    Feedback Form
+                </h2>
+
+                <div class="panel-saving mr-2" style="display:none"><i class="fal fa-spinner-third fa-spin-4x fs-xl"></i></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-panel hover-effect-dot js-panel-collapse waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-fullscreen waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></a> <a href="#" class="btn btn-panel hover-effect-dot js-panel-close waves-effect waves-themed" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></a></div><div class="panel-toolbar" role="menu"><a href="#" class="btn btn-toolbar-master waves-effect waves-themed" data-toggle="dropdown"><i class="fal fa-ellipsis-v"></i></a><div class="dropdown-menu dropdown-menu-animated dropdown-menu-right p-0"><a href="#" class="dropdown-item js-panel-refresh"><span data-i18n="drpdwn.refreshpanel">Refresh Content</span></a> <a href="#" class="dropdown-item js-panel-locked"><span data-i18n="drpdwn.lockpanel">Lock Position</span></a>  <div class="dropdown-multilevel dropdown-multilevel-left">											<div class="dropdown-item">												<span data-i18n="drpdwn.panelcolor">Panel Style</span>											</div>											<div class="dropdown-menu d-flex flex-wrap" style="min-width: 9.5rem; width: 9.5rem; padding: 0.5rem"><a href="#" class="btn d-inline-block bg-primary-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-500 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-500 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-primary-600 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-primary-600 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-primray-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-primray-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-600 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-600 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-info-700 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-info-700 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-700 bg-primary-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-700 bg-primary-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-success-600 bg-success-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-success-600 bg-success-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-danger-900 bg-info-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-danger-900 bg-info-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-fusion-400 bg-fusion-gradient width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-fusion-400 bg-fusion-gradient" style="margin:1px;"></a> <a href="#" class="btn d-inline-block bg-faded width-2 height-2 p-0 rounded-0 js-panel-color hover-effect-dot waves-effect waves-themed" data-panel-setstyle="bg-faded" style="margin:1px;"></a></div>										</div>  <div class="dropdown-divider m-0"></div><a href="#" class="dropdown-item js-panel-reset"><span data-i18n="drpdwn.resetpanel">Reset Panel</span></a></div></div>
+            </div>
+            <div class="panel-container show" role="content">
+                <div class="loader"><i class="fal fa-spinner-third fa-spin-4x fs-xxl"></i></div>
+                <div class="row mb-3">
+
+                    <div class="col-md-12">
+                        <form action="/User/Feedback" method="post" id="myform">
+
+                            <div class="panel-content">
+                                <div class="frame-wrap">
+                                    @{string confirmMessage = Convert.ToString(TempData["Message"]); string warningMessage = Convert.ToString(TempData["WarningMessage"]);}
+                                    @if (!string.IsNullOrEmpty(confirmMessage))
+                                    {
+                                        <div class="alert alert-success alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@confirmMessage" />
+                                            @confirmMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else if (!string.IsNullOrEmpty(warningMessage))
+                                    {
+                                        <div class="alert alert-warning alert-dismissable" id="divSuccessMessage">
+                                            <input type="hidden" id="messagealert" value="@warningMessage" />
+                                            @warningMessage
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <input type="hidden" id="messagealert" value="0" />
+                                    }
+                                        <div class="card p-3">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Training Institute Name:</label>
+                                                        @Html.HiddenFor(m => m.Feedback_Id, new { @class = "form-control", @id = "Feedback_Id" })
+                                                        @Html.DropDownListFor(x => x.Tr_Institute_Id, (IEnumerable<SelectListItem>)ViewBag.traininginstitute, new { @class = "form-control", @id = "traininginstitute", @Onchange = "BindType()" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Training Programme Name:</label>
+                                                        @Html.DropDownListFor(x => x.Traing_Type_Id, (IEnumerable<SelectListItem>)ViewBag.trainingType, new { @class = "form-control", @id = "trainingType" })
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">From Date:</label>
+                                                        @Html.TextBoxFor(x => x.From_Date, new { @class = "form-control",@type = "Date", @required = "true", @name = "From_Date", @id = "From_Date" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">To Date:</label>
+                                                        @Html.TextBoxFor(x => x.To_Date, new { @class = "form-control", @type = "Date", @required = "true", @name = "From_Date", @id = "From_Date" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Training was relevant to my needs:</label>
+                                                        <select name="Tr_Relevant" id="Tr_Relevant" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Length of training was sufficient:</label>
+                                                        <select name="Tr_Length" id="Tr_Length" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Instructions were clear and understandable:</label>
+                                                        <select name="Tr_Inst_Clear" id="Tr_Inst_Clear" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">The Trainer and/ or Training was effective:</label>
+                                                        <select name="Trainer_Effective" id="Trainer_Effective" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Training met my expectations:</label>
+                                                        <select name="Tr_Expectation" id="Tr_Expectation" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">The overall quality of the training:</label>
+                                                        <select name="Tr_Quality" id="Tr_Quality" class="form-control " required>
+                                                            <option value="0">Select</option>
+                                                            <option value="Good">Good</option>
+                                                            <option value="Very Good">Very Good</option>
+                                                            <option value="Excellent">Excellent</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">The content of the training impact on daily work:</label>
+                                                        @Html.TextAreaFor(x => x.Tr_Daily_Work, new { @class = "form-control", @name = "Tr_Daily_Work", @id = "Tr_Daily_Work" })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">The field where we can implement for development process:</label>
+                                                        @Html.TextAreaFor(x => x.Imp_Dev_Process, new { @class = "form-control", @name = "Imp_Dev_Process", @id = "Imp_Dev_Process" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="example-select">Explain anything about the training:</label>
+                                                        @Html.TextAreaFor(x => x.Explain_Training, new { @class = "form-control", @name = "Explain_Training", @id = "Explain_Training" })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-md-12">
+                                                    <button type="button" class="btn btn-warning waves-effect waves-themed" style="float:right;" onclick="location.reload()">Cancel</button>
+                                                    <button type="submit" id="button" class="btn btn-primary waves-effect waves-themed" style="float:right;margin-right:12px;">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function BindType() {
+        debugger;
+        var state = $('#traininginstitute').val();
+        //var statecount = $('#traininginstitute' + count).val();
+        count = 0;
+        debugger;
+        if (count == 0) {
+
+            $.ajax({
+                type: "post",
+                url: "/USer/Traintype",
+                /* data: { stateId: $('#AreaId').val() },*/
+
+                data: { cccc: state },
+                datatype: "json",
+                traditional: true,
+                success: function (data) {
+                    var district = "<select id='pblock'class='form-control'>";
+                    district = district + '<option value="">--Select--</option>';
+                    for (var i = 0; i < data.length; i++) {
+                        district = district + '<option value=' + data[i].Value + '>' + data[i].Text + '</option>';
+                    }
+                    district = district + '</select>';
+
+                    if (count == 0) {
+                        $("#trainingType").html(district);
+                    }
+                    else {
+                        $("#trainingType" + count).html(district);
+                    }
+
+                    /* $("#pblockdrop").val('1');*/
+                }
+            });
+        }
+        //else {
+        //    $.ajax({
+        //        type: "post",
+        //        url: "/User/Traintype",
+        //        /* data: { stateId: $('#AreaId').val() },*/
+
+        //        data: { cccc: statecount },
+        //        datatype: "json",
+        //        traditional: true,
+        //        success: function (data) {
+        //            var district = "<select id='pblock'class='form-control'>";
+        //            district = district + '<option value="">--Select--</option>';
+        //            for (var i = 0; i < data.length; i++) {
+        //                district = district + '<option value=' + data[i].Value + '>' + data[i].Text + '</option>';
+        //            }
+        //            district = district + '</select>';
+
+        //            if (count == 0) {
+        //                $("#trainingType").html(district);
+        //            }
+        //            else {
+        //                $("#trainingType" + count).html(district);
+        //            }
+
+        //            /* $("#pblockdrop").val('1');*/
+        //        }
+        //    });
+        //}
+    }
+</script>

@@ -1,0 +1,346 @@
+D:\DailyReporting\DailyReporting\bin\DailyReporting.dll.config
+D:\DailyReporting\DailyReporting\bin\DailyReporting.dll
+D:\DailyReporting\DailyReporting\bin\DailyReporting.pdb
+D:\DailyReporting\DailyReporting\bin\roslyn\csc.exe
+D:\DailyReporting\DailyReporting\bin\roslyn\csc.exe.config
+D:\DailyReporting\DailyReporting\bin\roslyn\csc.rsp
+D:\DailyReporting\DailyReporting\bin\roslyn\csi.exe
+D:\DailyReporting\DailyReporting\bin\roslyn\csi.exe.config
+D:\DailyReporting\DailyReporting\bin\roslyn\csi.rsp
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DailyReporting\DailyReporting\bin\roslyn\System.AppContext.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Collections.Immutable.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Console.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Compression.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Reflection.Metadata.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.AccessControl.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Claims.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Principal.Windows.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.ValueTuple.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DailyReporting\DailyReporting\bin\roslyn\vbc.exe
+D:\DailyReporting\DailyReporting\bin\roslyn\vbc.exe.config
+D:\DailyReporting\DailyReporting\bin\roslyn\vbc.rsp
+D:\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe
+D:\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe.config
+D:\DailyReporting\DailyReporting\bin\Antlr3.Runtime.dll
+D:\DailyReporting\DailyReporting\bin\EntityFramework.dll
+D:\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.dll
+D:\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DailyReporting\DailyReporting\bin\Microsoft.Web.Infrastructure.dll
+D:\DailyReporting\DailyReporting\bin\Newtonsoft.Json.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.Helpers.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.Mvc.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.Optimization.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.Razor.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.dll
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.dll
+D:\DailyReporting\DailyReporting\bin\WebGrease.dll
+D:\DailyReporting\DailyReporting\bin\EntityFramework.xml
+D:\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.Helpers.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.Mvc.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.Optimization.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.Razor.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.xml
+D:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.xml
+D:\DailyReporting\DailyReporting\bin\Newtonsoft.Json.xml
+D:\DailyReporting\DailyReporting\bin\Antlr3.Runtime.pdb
+D:\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CoreCompileInputs.cache
+D:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CopyComplete
+D:\DailyReporting\DailyReporting\obj\Release\DailyReporting.dll
+D:\DailyReporting\DailyReporting\obj\Release\DailyReporting.pdb
+D:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csprojAssemblyReference.cache
+F:\DailyReporting\DailyReporting\bin\DailyReporting.dll.config
+F:\DailyReporting\DailyReporting\bin\DailyReporting.dll
+F:\DailyReporting\DailyReporting\bin\DailyReporting.pdb
+F:\DailyReporting\DailyReporting\bin\roslyn\csc.exe
+F:\DailyReporting\DailyReporting\bin\roslyn\csc.exe.config
+F:\DailyReporting\DailyReporting\bin\roslyn\csc.rsp
+F:\DailyReporting\DailyReporting\bin\roslyn\csi.exe
+F:\DailyReporting\DailyReporting\bin\roslyn\csi.exe.config
+F:\DailyReporting\DailyReporting\bin\roslyn\csi.rsp
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Managed.Core.targets
+F:\DailyReporting\DailyReporting\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DailyReporting\DailyReporting\bin\roslyn\System.AppContext.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Collections.Immutable.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Console.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Compression.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Reflection.Metadata.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.AccessControl.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Claims.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Security.Principal.Windows.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.ValueTuple.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XmlDocument.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\DailyReporting\DailyReporting\bin\roslyn\vbc.exe
+F:\DailyReporting\DailyReporting\bin\roslyn\vbc.exe.config
+F:\DailyReporting\DailyReporting\bin\roslyn\vbc.rsp
+F:\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe
+F:\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe.config
+F:\DailyReporting\DailyReporting\bin\Antlr3.Runtime.dll
+F:\DailyReporting\DailyReporting\bin\EntityFramework.dll
+F:\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.dll
+F:\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DailyReporting\DailyReporting\bin\Microsoft.Web.Infrastructure.dll
+F:\DailyReporting\DailyReporting\bin\Newtonsoft.Json.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.Helpers.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.Mvc.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.Optimization.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.Razor.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.dll
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.dll
+F:\DailyReporting\DailyReporting\bin\WebGrease.dll
+F:\DailyReporting\DailyReporting\bin\EntityFramework.xml
+F:\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.Helpers.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.Mvc.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.Optimization.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.Razor.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.xml
+F:\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.xml
+F:\DailyReporting\DailyReporting\bin\Newtonsoft.Json.xml
+F:\DailyReporting\DailyReporting\bin\Antlr3.Runtime.pdb
+F:\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csprojAssemblyReference.cache
+F:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CoreCompileInputs.cache
+F:\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CopyComplete
+F:\DailyReporting\DailyReporting\obj\Release\DailyReporting.dll
+F:\DailyReporting\DailyReporting\obj\Release\DailyReporting.pdb
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\DailyReporting.dll.config
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\DailyReporting.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\DailyReporting.pdb
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csc.exe
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csc.exe.config
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csc.rsp
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csi.exe
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csi.exe.config
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\csi.rsp
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.Managed.Core.targets
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.AppContext.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Collections.Immutable.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Console.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.IO.Compression.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.IO.Pipes.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Reflection.Metadata.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.AccessControl.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Claims.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Security.Principal.Windows.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.ValueTuple.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XmlDocument.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\vbc.exe
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\vbc.exe.config
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\vbc.rsp
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\roslyn\VBCSCompiler.exe.config
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Microsoft.Win32.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\netstandard.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.AppContext.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Collections.Concurrent.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Collections.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Collections.NonGeneric.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Collections.Specialized.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ComponentModel.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ComponentModel.EventBasedAsync.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ComponentModel.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ComponentModel.TypeConverter.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Console.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Data.Common.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.Contracts.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.Debug.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.FileVersionInfo.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.Process.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.StackTrace.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.TextWriterTraceListener.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.Tools.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.TraceSource.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Diagnostics.Tracing.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Drawing.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Dynamic.Runtime.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Globalization.Calendars.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Globalization.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Globalization.Extensions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.Compression.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.Compression.ZipFile.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.FileSystem.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.FileSystem.DriveInfo.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.FileSystem.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.FileSystem.Watcher.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.IsolatedStorage.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.MemoryMappedFiles.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.Pipes.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.IO.UnmanagedMemoryStream.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Linq.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Linq.Expressions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Linq.Parallel.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Linq.Queryable.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Http.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.NameResolution.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.NetworkInformation.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Ping.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Requests.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Security.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.Sockets.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.WebHeaderCollection.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.WebSockets.Client.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Net.WebSockets.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ObjectModel.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Reflection.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Reflection.Extensions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Reflection.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Resources.Reader.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Resources.ResourceManager.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Resources.Writer.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.CompilerServices.VisualC.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Extensions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Handles.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.InteropServices.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Numerics.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Serialization.Formatters.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Serialization.Json.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Serialization.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.Serialization.Xml.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Claims.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Cryptography.Algorithms.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Cryptography.Csp.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Cryptography.Encoding.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Cryptography.Primitives.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Cryptography.X509Certificates.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.Principal.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Security.SecureString.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Text.Encoding.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Text.Encoding.Extensions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Text.RegularExpressions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Overlapped.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Tasks.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Tasks.Parallel.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Thread.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.ThreadPool.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Timer.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.ValueTuple.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.ReaderWriter.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.XDocument.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.XmlDocument.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.XmlSerializer.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.XPath.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Xml.XPath.XDocument.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Antlr3.Runtime.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\EntityFramework.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Microsoft.Web.Infrastructure.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Newtonsoft.Json.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Tasks.Extensions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Helpers.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Mvc.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Optimization.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Razor.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Unity.Abstractions.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Unity.Container.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Unity.Mvc5.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\WebActivatorEx.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\WebGrease.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\EntityFramework.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\EntityFramework.SqlServer.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Threading.Tasks.Extensions.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Helpers.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Mvc.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Razor.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.Deployment.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.WebPages.Razor.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\System.Web.Optimization.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Newtonsoft.Json.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Unity.Abstractions.pdb
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Unity.Container.pdb
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Antlr3.Runtime.pdb
+F:\TAS New\TAS\DailyReporting\DailyReporting\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\TAS New\TAS\DailyReporting\DailyReporting\obj\Release\DailyReporting.csprojAssemblyReference.cache
+F:\TAS New\TAS\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CoreCompileInputs.cache
+F:\TAS New\TAS\DailyReporting\DailyReporting\obj\Release\DailyReporting.csproj.CopyComplete
+F:\TAS New\TAS\DailyReporting\DailyReporting\obj\Release\DailyReporting.dll
+F:\TAS New\TAS\DailyReporting\DailyReporting\obj\Release\DailyReporting.pdb

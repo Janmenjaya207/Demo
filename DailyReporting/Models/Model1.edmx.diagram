@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3a25957700ef4f70bf9cfdea4a18d82e" Name="Diagram1">
+        <EntityTypeShape EntityType="TASModel.Designation" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.Education_Qualfication" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.Post" Width="1.5" PointX="0.625" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.Training_Catagory" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.Training_Intended" Width="1.5" PointX="4.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.User_Type" Width="1.5" PointX="6.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TASModel.Vw_Manage_User" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TASModel.Training_Institute" Width="1.5" PointX="8.75" PointY="4.5" />
+        <EntityTypeShape EntityType="TASModel.Training_Type" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_Training_Type" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TASModel.Manage_User" Width="1.5" PointX="0.5" PointY="6.875" />
+        <EntityTypeShape EntityType="TASModel.TAS_Details" Width="1.5" PointX="4.75" PointY="11.125" />
+        <EntityTypeShape EntityType="TASModel.Vw_Employee_Details" Width="1.5" PointX="4.75" PointY="7" />
+        <EntityTypeShape EntityType="TASModel.Feedback" Width="1.5" PointX="0.5" PointY="11.375" />
+        <EntityTypeShape EntityType="TASModel.Vw_Training_Assign" Width="1.5" PointX="9.375" PointY="10.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_Feedback" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TASModel.TrainingDetail" Width="1.5" PointX="11.375" PointY="10.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_Admin_Training_Assign" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="TASModel.TraingAssign" Width="1.5" PointX="13.375" PointY="10.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_Admin_Training_Assign_Details" Width="1.5" PointX="7.375" PointY="14.75" />
+        <EntityTypeShape EntityType="TASModel.vw_employee_institute" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_Employee_Details_Report" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TASModel.TrainingAssignDetail" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TASModel.Vw_User_Training_Assign" Width="1.5" PointX="15.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

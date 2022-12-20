@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "AssignTrainingDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .bank-detail {
+        display: flex;
+    }
+
+        .bank-detail img {
+            width: 100px;
+            border-radius: 6px;
+        }
+
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.19437rem;
+        padding-left: 46px;
+    }
+
+    .mtop {
+        margin-top: 30px;
+    }
+
+
+    .demo > * {
+        margin: 0 0 0 10px !important;
+    }
+</style>
+
+<div class="subheader">
+    <h1 class="subheader-title">
+        <i class="subheader-icon fal fa-edit"></i>View Assigned Training
+
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+
+            <div class="panel-hdr">
+                <h2>
+                    Training Details <span class="fw-300"><i>List</i></span>
+                </h2>
+            </div>
+
+            <div class="panel-container show">
+                <div class="panel-content">
+                    <!-- datatable start -->
+                    <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100 table-responsive">
+                        <thead>
+                            <tr role="row">
+                                <th>Sl. No</th>
+                                <th>Training Institute Name</th>
+                                <th>Training Programme Name</th>
+                                <th style="width: 70px;">From Date</th>
+                                <th style="width: 70px;">To Date</th>
+                                <th style="width: 200px;">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int count = 0;}
+                            @if (ViewBag.TrAssgn != null)
+                            {
+                                foreach (var iteam in ViewBag.TrAssgn)
+                                {
+                                    count = count + 1;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td class="sorting_1">@iteam.Tr_Institute_Name</td>
+                                        <td class="sorting_1">@iteam.Traing_Name</td>
+                                        <td class="sorting_1">@iteam.Trfdate</td>
+                                        <td class="sorting_1">@iteam.Trtdate</td>
+                                        <td class="sorting_1">@iteam.Remarks</td>
+                                    </tr>
+                                }
+                            }
+
+                        </tbody>
+
+                    </table>
+                    <!-- datatable end -->
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TASModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="DesgId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesgName" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Education_Qualfication">
+    <Key>
+      <PropertyRef Name="E_Qual_Id" />
+    </Key>
+    <Property Name="E_Qual_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="E_Qual_Name" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="Feedback_Id" />
+    </Key>
+    <Property Name="Feedback_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="From_Date" Type="datetime" />
+    <Property Name="To_Date" Type="datetime" />
+    <Property Name="Tr_Relevant" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Length" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Inst_Clear" Type="varchar" MaxLength="50" />
+    <Property Name="Trainer_Effective" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Expectation" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Quality" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Daily_Work" Type="varchar(max)" />
+    <Property Name="Imp_Dev_Process" Type="varchar(max)" />
+    <Property Name="Explain_Training" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Manage_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTypeId" Type="int" />
+    <Property Name="Tas_Id" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PostName" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="TAS_Details">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesgId" Type="int" />
+    <Property Name="E_Qual_Id" Type="int" />
+    <Property Name="PostId" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="Traing_Cata_Id" Type="int" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Tr_Intended_Id" Type="int" />
+    <Property Name="Tas_User_Id" Type="int" />
+    <Property Name="Tr_Intended_details" Type="varchar(max)" />
+    <Property Name="Emp_Name" Type="varchar(max)" />
+    <Property Name="Present_Post" Type="varchar(max)" />
+    <Property Name="Edu_Qualification" Type="varchar(max)" />
+    <Property Name="Retirement_Date" Type="datetime" />
+    <Property Name="Prv_Assignment" Type="varchar(max)" />
+    <Property Name="Tr_Period_From" Type="datetime" />
+    <Property Name="Tr_Period_To" Type="datetime" />
+    <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="TraingAssign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="Trfdate" Type="datetime" />
+    <Property Name="Trtdate" Type="datetime" />
+    <Property Name="Is_Status" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModBy" Type="varchar" MaxLength="50" />
+    <Property Name="Modon" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Training_Catagory">
+    <Key>
+      <PropertyRef Name="Traing_Cata_Id" />
+    </Key>
+    <Property Name="Traing_Cata_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Traing_Id" Type="int" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Cata_Name" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Training_Institute">
+    <Key>
+      <PropertyRef Name="Tr_Institute_Id" />
+    </Key>
+    <Property Name="Tr_Institute_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Insti_Type" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Training_Intended">
+    <Key>
+      <PropertyRef Name="Tr_Intended_Id" />
+    </Key>
+    <Property Name="Tr_Intended_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Intended_Name" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Training_Type">
+    <Key>
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Traing_Type_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Tr_Address" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="TrainingAssignDetails">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tr_AssignID" Type="int" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="IsVisible" Type="bit" />
+    <Property Name="IsEmail" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="TrainingDetails">
+    <Key>
+      <PropertyRef Name="TraingdeatilsId" />
+    </Key>
+    <Property Name="TraingdeatilsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tas_Id" Type="int" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Days" Type="int" />
+    <Property Name="Createdby" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Modby" Type="datetime" />
+    <Property Name="Modon" Type="varchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="User_Type">
+    <Key>
+      <PropertyRef Name="UserTypeId" />
+    </Key>
+    <Property Name="UserTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Admin_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Admin_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Admin_Training_Assign_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Admin_Training_Assign_Details">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+      <PropertyRef Name="Tr_AssignID" />
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="int" Nullable="false" />
+    <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="Retirement_Date" Type="datetime" />
+    <Property Name="DesgId" Type="int" Nullable="false" />
+    <Property Name="DesgName" Type="varchar(max)" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Employee_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Employee_Details">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="int" Nullable="false" />
+    <Property Name="Emp_Name" Type="varchar(max)" />
+    <Property Name="Retirement_Date" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Prv_Assignment" Type="varchar(max)" />
+    <Property Name="Present_Post" Type="varchar(max)" />
+    <Property Name="Edu_Qualification" Type="varchar(max)" />
+    <Property Name="DesgId" Type="int" />
+    <Property Name="DesgName" Type="varchar(max)" />
+    <Property Name="Tr_Intended_details" Type="varchar(max)" />
+    <Property Name="Tr_Intended_Id" Type="int" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Employee_Details_Report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Employee_Details_Report">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+      <PropertyRef Name="Tr_Institute_Id" />
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="int" Nullable="false" />
+    <Property Name="Emp_Name" Type="varchar(max)" />
+    <Property Name="Retirement_Date" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Prv_Assignment" Type="varchar(max)" />
+    <Property Name="Present_Post" Type="varchar(max)" />
+    <Property Name="Edu_Qualification" Type="varchar(max)" />
+    <Property Name="DesgId" Type="int" />
+    <Property Name="DesgName" Type="varchar(max)" />
+    <Property Name="Tr_Intended_details" Type="varchar(max)" />
+    <Property Name="Tr_Intended_Id" Type="int" />
+    <Property Name="Tr_Institute_Id" Type="int" Nullable="false" />
+    <Property Name="Traing_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Days" Type="int" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.vw_employee_institute' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_employee_institute">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="DesgName" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Feedback' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Feedback">
+    <Key>
+      <PropertyRef Name="Feedback_Id" />
+    </Key>
+    <Property Name="Feedback_Id" Type="int" Nullable="false" />
+    <Property Name="From_Date" Type="nvarchar" MaxLength="4000" />
+    <Property Name="To_Date" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Tr_Relevant" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Length" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Inst_Clear" Type="varchar" MaxLength="50" />
+    <Property Name="Trainer_Effective" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Expectation" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Quality" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Daily_Work" Type="varchar(max)" />
+    <Property Name="Imp_Dev_Process" Type="varchar(max)" />
+    <Property Name="Explain_Training" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="Tr_Institute_Id" Type="int" />
+    <Property Name="Traing_Type_Id" Type="int" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Manage_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Manage_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+    <Property Name="UserTypeId" Type="int" />
+    <Property Name="UserTypeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Training_Type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_Training_Type">
+    <Key>
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Traing_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Tr_Address" Type="varchar(max)" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_User_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Vw_User_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+      <PropertyRef Name="Tr_AssignID" />
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="int" Nullable="false" />
+    <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Emaild" Type="varchar" MaxLength="50" />
+    <Property Name="Retirement_Date" Type="datetime" />
+    <Property Name="DesgId" Type="int" Nullable="false" />
+    <Property Name="DesgName" Type="varchar(max)" />
+    <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+    <Property Name="Traing_Name" Type="varchar(max)" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Crton" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="TASModelStoreContainer">
+    <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education_Qualfication" EntityType="Self.Education_Qualfication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manage_User" EntityType="Self.Manage_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAS_Details" EntityType="Self.TAS_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TraingAssign" EntityType="Self.TraingAssign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Training_Catagory" EntityType="Self.Training_Catagory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Training_Institute" EntityType="Self.Training_Institute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Training_Intended" EntityType="Self.Training_Intended" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Training_Type" EntityType="Self.Training_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrainingAssignDetails" EntityType="Self.TrainingAssignDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrainingDetails" EntityType="Self.TrainingDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Type" EntityType="Self.User_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vw_Admin_Training_Assign" EntityType="Self.Vw_Admin_Training_Assign" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Admin_Training_Assign].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Admin_Training_Assign].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Admin_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Admin_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_Admin_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_Admin_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_Admin_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Admin_Training_Assign].[Traing_Name] AS [Traing_Name]
+    FROM [dbo].[Vw_Admin_Training_Assign] AS [Vw_Admin_Training_Assign]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Admin_Training_Assign_Details" EntityType="Self.Vw_Admin_Training_Assign_Details" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Admin_Training_Assign_Details].[Tr_Ass_DetailsID] AS [Tr_Ass_DetailsID], 
+    [Vw_Admin_Training_Assign_Details].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Admin_Training_Assign_Details].[Remarks] AS [Remarks], 
+    [Vw_Admin_Training_Assign_Details].[Trfdate] AS [Trfdate], 
+    [Vw_Admin_Training_Assign_Details].[Trtdate] AS [Trtdate], 
+    [Vw_Admin_Training_Assign_Details].[Emaild] AS [Emaild], 
+    [Vw_Admin_Training_Assign_Details].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Admin_Training_Assign_Details].[DesgId] AS [DesgId], 
+    [Vw_Admin_Training_Assign_Details].[DesgName] AS [DesgName], 
+    [Vw_Admin_Training_Assign_Details].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Admin_Training_Assign_Details].[Traing_Name] AS [Traing_Name], 
+    [Vw_Admin_Training_Assign_Details].[Userid] AS [Userid], 
+    [Vw_Admin_Training_Assign_Details].[FirstName] AS [FirstName], 
+    [Vw_Admin_Training_Assign_Details].[CreatedOn] AS [CreatedOn], 
+    [Vw_Admin_Training_Assign_Details].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Admin_Training_Assign_Details] AS [Vw_Admin_Training_Assign_Details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Employee_Details" EntityType="Self.Vw_Employee_Details" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Employee_Details].[Tas_Id] AS [Tas_Id], 
+    [Vw_Employee_Details].[Emp_Name] AS [Emp_Name], 
+    [Vw_Employee_Details].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Employee_Details].[Prv_Assignment] AS [Prv_Assignment], 
+    [Vw_Employee_Details].[Present_Post] AS [Present_Post], 
+    [Vw_Employee_Details].[Edu_Qualification] AS [Edu_Qualification], 
+    [Vw_Employee_Details].[DesgId] AS [DesgId], 
+    [Vw_Employee_Details].[DesgName] AS [DesgName], 
+    [Vw_Employee_Details].[Tr_Intended_details] AS [Tr_Intended_details], 
+    [Vw_Employee_Details].[Tr_Intended_Id] AS [Tr_Intended_Id], 
+    [Vw_Employee_Details].[Emaild] AS [Emaild], 
+    [Vw_Employee_Details].[Agreed_For_Training] AS [Agreed_For_Training], 
+    [Vw_Employee_Details].[Remarks] AS [Remarks], 
+    [Vw_Employee_Details].[CreatedOn] AS [CreatedOn], 
+    [Vw_Employee_Details].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Employee_Details] AS [Vw_Employee_Details]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Employee_Details_Report" EntityType="Self.Vw_Employee_Details_Report" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Employee_Details_Report].[Tas_Id] AS [Tas_Id], 
+    [Vw_Employee_Details_Report].[Emp_Name] AS [Emp_Name], 
+    [Vw_Employee_Details_Report].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Employee_Details_Report].[Prv_Assignment] AS [Prv_Assignment], 
+    [Vw_Employee_Details_Report].[Present_Post] AS [Present_Post], 
+    [Vw_Employee_Details_Report].[Edu_Qualification] AS [Edu_Qualification], 
+    [Vw_Employee_Details_Report].[DesgId] AS [DesgId], 
+    [Vw_Employee_Details_Report].[DesgName] AS [DesgName], 
+    [Vw_Employee_Details_Report].[Tr_Intended_details] AS [Tr_Intended_details], 
+    [Vw_Employee_Details_Report].[Tr_Intended_Id] AS [Tr_Intended_Id], 
+    [Vw_Employee_Details_Report].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Employee_Details_Report].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Employee_Details_Report].[Year] AS [Year], 
+    [Vw_Employee_Details_Report].[Days] AS [Days], 
+    [Vw_Employee_Details_Report].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Employee_Details_Report].[Traing_Name] AS [Traing_Name], 
+    [Vw_Employee_Details_Report].[Agreed_For_Training] AS [Agreed_For_Training], 
+    [Vw_Employee_Details_Report].[Remarks] AS [Remarks], 
+    [Vw_Employee_Details_Report].[CreatedOn] AS [CreatedOn], 
+    [Vw_Employee_Details_Report].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Employee_Details_Report] AS [Vw_Employee_Details_Report]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_employee_institute" EntityType="Self.vw_employee_institute" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_employee_institute].[Tr_AssignID] AS [Tr_AssignID], 
+    [vw_employee_institute].[FirstName] AS [FirstName], 
+    [vw_employee_institute].[Emaild] AS [Emaild], 
+    [vw_employee_institute].[DesgName] AS [DesgName]
+    FROM [dbo].[vw_employee_institute] AS [vw_employee_institute]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Feedback" EntityType="Self.Vw_Feedback" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Feedback].[Feedback_Id] AS [Feedback_Id], 
+    [Vw_Feedback].[From_Date] AS [From_Date], 
+    [Vw_Feedback].[To_Date] AS [To_Date], 
+    [Vw_Feedback].[Tr_Relevant] AS [Tr_Relevant], 
+    [Vw_Feedback].[Tr_Length] AS [Tr_Length], 
+    [Vw_Feedback].[Tr_Inst_Clear] AS [Tr_Inst_Clear], 
+    [Vw_Feedback].[Trainer_Effective] AS [Trainer_Effective], 
+    [Vw_Feedback].[Tr_Expectation] AS [Tr_Expectation], 
+    [Vw_Feedback].[Tr_Quality] AS [Tr_Quality], 
+    [Vw_Feedback].[Tr_Daily_Work] AS [Tr_Daily_Work], 
+    [Vw_Feedback].[Imp_Dev_Process] AS [Imp_Dev_Process], 
+    [Vw_Feedback].[Explain_Training] AS [Explain_Training], 
+    [Vw_Feedback].[CreatedBy] AS [CreatedBy], 
+    [Vw_Feedback].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Feedback].[Traing_Name] AS [Traing_Name], 
+    [Vw_Feedback].[FirstName] AS [FirstName], 
+    [Vw_Feedback].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Feedback].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Feedback].[CreatedOn] AS [CreatedOn], 
+    [Vw_Feedback].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Feedback] AS [Vw_Feedback]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Manage_User" EntityType="Self.Vw_Manage_User" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Manage_User].[UserId] AS [UserId], 
+    [Vw_Manage_User].[FirstName] AS [FirstName], 
+    [Vw_Manage_User].[LastName] AS [LastName], 
+    [Vw_Manage_User].[MobileNo] AS [MobileNo], 
+    [Vw_Manage_User].[Emaild] AS [Emaild], 
+    [Vw_Manage_User].[Address] AS [Address], 
+    [Vw_Manage_User].[UserName] AS [UserName], 
+    [Vw_Manage_User].[Password] AS [Password], 
+    [Vw_Manage_User].[CreatedBy] AS [CreatedBy], 
+    [Vw_Manage_User].[CreatedOn] AS [CreatedOn], 
+    [Vw_Manage_User].[Crton] AS [Crton], 
+    [Vw_Manage_User].[UserTypeId] AS [UserTypeId], 
+    [Vw_Manage_User].[UserTypeName] AS [UserTypeName]
+    FROM [dbo].[Vw_Manage_User] AS [Vw_Manage_User]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Training_Assign" EntityType="Self.Vw_Training_Assign" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Training_Assign].[Traing_Name] AS [Traing_Name], 
+    [Vw_Training_Assign].[Userid] AS [Userid], 
+    [Vw_Training_Assign].[FirstName] AS [FirstName], 
+    [Vw_Training_Assign].[CreatedOn] AS [CreatedOn], 
+    [Vw_Training_Assign].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Training_Assign] AS [Vw_Training_Assign]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Training_Type" EntityType="Self.Vw_Training_Type" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Training_Type].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Training_Type].[Traing_Name] AS [Traing_Name], 
+    [Vw_Training_Type].[Tr_Address] AS [Tr_Address], 
+    [Vw_Training_Type].[CreatedOn] AS [CreatedOn], 
+    [Vw_Training_Type].[Crton] AS [Crton], 
+    [Vw_Training_Type].[Tr_Institute_Name] AS [Tr_Institute_Name]
+    FROM [dbo].[Vw_Training_Type] AS [Vw_Training_Type]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_User_Training_Assign" EntityType="Self.Vw_User_Training_Assign" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_User_Training_Assign].[Tr_Ass_DetailsID] AS [Tr_Ass_DetailsID], 
+    [Vw_User_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_User_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_User_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_User_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_User_Training_Assign].[Emaild] AS [Emaild], 
+    [Vw_User_Training_Assign].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_User_Training_Assign].[DesgId] AS [DesgId], 
+    [Vw_User_Training_Assign].[DesgName] AS [DesgName], 
+    [Vw_User_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_User_Training_Assign].[Traing_Name] AS [Traing_Name], 
+    [Vw_User_Training_Assign].[Userid] AS [Userid], 
+    [Vw_User_Training_Assign].[FirstName] AS [FirstName], 
+    [Vw_User_Training_Assign].[CreatedOn] AS [CreatedOn], 
+    [Vw_User_Training_Assign].[Crton] AS [Crton]
+    FROM [dbo].[Vw_User_Training_Assign] AS [Vw_User_Training_Assign]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,1520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TASModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="DesgId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DesgName" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Education_Qualfication">
+          <Key>
+            <PropertyRef Name="E_Qual_Id" />
+          </Key>
+          <Property Name="E_Qual_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="E_Qual_Name" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_Id" />
+          </Key>
+          <Property Name="Feedback_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="From_Date" Type="datetime" />
+          <Property Name="To_Date" Type="datetime" />
+          <Property Name="Tr_Relevant" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Length" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Inst_Clear" Type="varchar" MaxLength="50" />
+          <Property Name="Trainer_Effective" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Expectation" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Quality" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Daily_Work" Type="varchar(max)" />
+          <Property Name="Imp_Dev_Process" Type="varchar(max)" />
+          <Property Name="Explain_Training" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Manage_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="Tas_Id" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostId" />
+          </Key>
+          <Property Name="PostId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PostName" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="TAS_Details">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DesgId" Type="int" />
+          <Property Name="E_Qual_Id" Type="int" />
+          <Property Name="PostId" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="Traing_Cata_Id" Type="int" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Tr_Intended_Id" Type="int" />
+          <Property Name="Tas_User_Id" Type="int" />
+          <Property Name="Tr_Intended_details" Type="varchar(max)" />
+          <Property Name="Emp_Name" Type="varchar(max)" />
+          <Property Name="Present_Post" Type="varchar(max)" />
+          <Property Name="Edu_Qualification" Type="varchar(max)" />
+          <Property Name="Retirement_Date" Type="datetime" />
+          <Property Name="Prv_Assignment" Type="varchar(max)" />
+          <Property Name="Tr_Period_From" Type="datetime" />
+          <Property Name="Tr_Period_To" Type="datetime" />
+          <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="TraingAssign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Trfdate" Type="datetime" />
+          <Property Name="Trtdate" Type="datetime" />
+          <Property Name="Is_Status" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModBy" Type="varchar" MaxLength="50" />
+          <Property Name="Modon" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Training_Catagory">
+          <Key>
+            <PropertyRef Name="Traing_Cata_Id" />
+          </Key>
+          <Property Name="Traing_Cata_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Traing_Id" Type="int" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Cata_Name" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Training_Institute">
+          <Key>
+            <PropertyRef Name="Tr_Institute_Id" />
+          </Key>
+          <Property Name="Tr_Institute_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Insti_Type" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Training_Intended">
+          <Key>
+            <PropertyRef Name="Tr_Intended_Id" />
+          </Key>
+          <Property Name="Tr_Intended_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_Intended_Name" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Training_Type">
+          <Key>
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Traing_Type_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Tr_Address" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="TrainingAssignDetails">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tr_AssignID" Type="int" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="IsVisible" Type="bit" />
+          <Property Name="IsEmail" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="TrainingDetails">
+          <Key>
+            <PropertyRef Name="TraingdeatilsId" />
+          </Key>
+          <Property Name="TraingdeatilsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tas_Id" Type="int" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Days" Type="int" />
+          <Property Name="Createdby" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="Modby" Type="datetime" />
+          <Property Name="Modon" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="User_Type">
+          <Key>
+            <PropertyRef Name="UserTypeId" />
+          </Key>
+          <Property Name="UserTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserTypeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Admin_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Admin_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Admin_Training_Assign_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Admin_Training_Assign_Details">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+            <PropertyRef Name="Tr_AssignID" />
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="int" Nullable="false" />
+          <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="Retirement_Date" Type="datetime" />
+          <Property Name="DesgId" Type="int" Nullable="false" />
+          <Property Name="DesgName" Type="varchar(max)" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Employee_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Employee_Details">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="int" Nullable="false" />
+          <Property Name="Emp_Name" Type="varchar(max)" />
+          <Property Name="Retirement_Date" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Prv_Assignment" Type="varchar(max)" />
+          <Property Name="Present_Post" Type="varchar(max)" />
+          <Property Name="Edu_Qualification" Type="varchar(max)" />
+          <Property Name="DesgId" Type="int" />
+          <Property Name="DesgName" Type="varchar(max)" />
+          <Property Name="Tr_Intended_details" Type="varchar(max)" />
+          <Property Name="Tr_Intended_Id" Type="int" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Employee_Details_Report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Employee_Details_Report">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+            <PropertyRef Name="Tr_Institute_Id" />
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="int" Nullable="false" />
+          <Property Name="Emp_Name" Type="varchar(max)" />
+          <Property Name="Retirement_Date" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Prv_Assignment" Type="varchar(max)" />
+          <Property Name="Present_Post" Type="varchar(max)" />
+          <Property Name="Edu_Qualification" Type="varchar(max)" />
+          <Property Name="DesgId" Type="int" />
+          <Property Name="DesgName" Type="varchar(max)" />
+          <Property Name="Tr_Intended_details" Type="varchar(max)" />
+          <Property Name="Tr_Intended_Id" Type="int" />
+          <Property Name="Tr_Institute_Id" Type="int" Nullable="false" />
+          <Property Name="Traing_Type_Id" Type="int" Nullable="false" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Days" Type="int" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Agreed_For_Training" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.vw_employee_institute' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_employee_institute">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="DesgName" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Feedback' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_Id" />
+          </Key>
+          <Property Name="Feedback_Id" Type="int" Nullable="false" />
+          <Property Name="From_Date" Type="nvarchar" MaxLength="4000" />
+          <Property Name="To_Date" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Tr_Relevant" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Length" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Inst_Clear" Type="varchar" MaxLength="50" />
+          <Property Name="Trainer_Effective" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Expectation" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Quality" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Daily_Work" Type="varchar(max)" />
+          <Property Name="Imp_Dev_Process" Type="varchar(max)" />
+          <Property Name="Explain_Training" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="Tr_Institute_Id" Type="int" />
+          <Property Name="Traing_Type_Id" Type="int" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Manage_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Manage_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="varchar" MaxLength="10" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+          <Property Name="UserTypeId" Type="int" />
+          <Property Name="UserTypeName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_Training_Type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_Training_Type">
+          <Key>
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Traing_Type_Id" Type="int" Nullable="false" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Tr_Address" Type="varchar(max)" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TAS.dbo.Vw_User_Training_Assign' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Vw_User_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+            <PropertyRef Name="Tr_AssignID" />
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="int" Nullable="false" />
+          <Property Name="Tr_AssignID" Type="int" Nullable="false" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Trfdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Trtdate" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Emaild" Type="varchar" MaxLength="50" />
+          <Property Name="Retirement_Date" Type="datetime" />
+          <Property Name="DesgId" Type="int" Nullable="false" />
+          <Property Name="DesgName" Type="varchar(max)" />
+          <Property Name="Tr_Institute_Name" Type="varchar(max)" />
+          <Property Name="Traing_Name" Type="varchar(max)" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Crton" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="TASModelStoreContainer">
+          <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Education_Qualfication" EntityType="Self.Education_Qualfication" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Manage_User" EntityType="Self.Manage_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TAS_Details" EntityType="Self.TAS_Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TraingAssign" EntityType="Self.TraingAssign" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Training_Catagory" EntityType="Self.Training_Catagory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Training_Institute" EntityType="Self.Training_Institute" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Training_Intended" EntityType="Self.Training_Intended" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Training_Type" EntityType="Self.Training_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrainingAssignDetails" EntityType="Self.TrainingAssignDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrainingDetails" EntityType="Self.TrainingDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Type" EntityType="Self.User_Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vw_Admin_Training_Assign" EntityType="Self.Vw_Admin_Training_Assign" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Admin_Training_Assign].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Admin_Training_Assign].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Admin_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Admin_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_Admin_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_Admin_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_Admin_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Admin_Training_Assign].[Traing_Name] AS [Traing_Name]
+    FROM [dbo].[Vw_Admin_Training_Assign] AS [Vw_Admin_Training_Assign]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Admin_Training_Assign_Details" EntityType="Self.Vw_Admin_Training_Assign_Details" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Admin_Training_Assign_Details].[Tr_Ass_DetailsID] AS [Tr_Ass_DetailsID], 
+    [Vw_Admin_Training_Assign_Details].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Admin_Training_Assign_Details].[Remarks] AS [Remarks], 
+    [Vw_Admin_Training_Assign_Details].[Trfdate] AS [Trfdate], 
+    [Vw_Admin_Training_Assign_Details].[Trtdate] AS [Trtdate], 
+    [Vw_Admin_Training_Assign_Details].[Emaild] AS [Emaild], 
+    [Vw_Admin_Training_Assign_Details].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Admin_Training_Assign_Details].[DesgId] AS [DesgId], 
+    [Vw_Admin_Training_Assign_Details].[DesgName] AS [DesgName], 
+    [Vw_Admin_Training_Assign_Details].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Admin_Training_Assign_Details].[Traing_Name] AS [Traing_Name], 
+    [Vw_Admin_Training_Assign_Details].[Userid] AS [Userid], 
+    [Vw_Admin_Training_Assign_Details].[FirstName] AS [FirstName], 
+    [Vw_Admin_Training_Assign_Details].[CreatedOn] AS [CreatedOn], 
+    [Vw_Admin_Training_Assign_Details].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Admin_Training_Assign_Details] AS [Vw_Admin_Training_Assign_Details]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Employee_Details" EntityType="Self.Vw_Employee_Details" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Employee_Details].[Tas_Id] AS [Tas_Id], 
+    [Vw_Employee_Details].[Emp_Name] AS [Emp_Name], 
+    [Vw_Employee_Details].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Employee_Details].[Prv_Assignment] AS [Prv_Assignment], 
+    [Vw_Employee_Details].[Present_Post] AS [Present_Post], 
+    [Vw_Employee_Details].[Edu_Qualification] AS [Edu_Qualification], 
+    [Vw_Employee_Details].[DesgId] AS [DesgId], 
+    [Vw_Employee_Details].[DesgName] AS [DesgName], 
+    [Vw_Employee_Details].[Tr_Intended_details] AS [Tr_Intended_details], 
+    [Vw_Employee_Details].[Tr_Intended_Id] AS [Tr_Intended_Id], 
+    [Vw_Employee_Details].[Emaild] AS [Emaild], 
+    [Vw_Employee_Details].[Agreed_For_Training] AS [Agreed_For_Training], 
+    [Vw_Employee_Details].[Remarks] AS [Remarks], 
+    [Vw_Employee_Details].[CreatedOn] AS [CreatedOn], 
+    [Vw_Employee_Details].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Employee_Details] AS [Vw_Employee_Details]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Employee_Details_Report" EntityType="Self.Vw_Employee_Details_Report" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Employee_Details_Report].[Tas_Id] AS [Tas_Id], 
+    [Vw_Employee_Details_Report].[Emp_Name] AS [Emp_Name], 
+    [Vw_Employee_Details_Report].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_Employee_Details_Report].[Prv_Assignment] AS [Prv_Assignment], 
+    [Vw_Employee_Details_Report].[Present_Post] AS [Present_Post], 
+    [Vw_Employee_Details_Report].[Edu_Qualification] AS [Edu_Qualification], 
+    [Vw_Employee_Details_Report].[DesgId] AS [DesgId], 
+    [Vw_Employee_Details_Report].[DesgName] AS [DesgName], 
+    [Vw_Employee_Details_Report].[Tr_Intended_details] AS [Tr_Intended_details], 
+    [Vw_Employee_Details_Report].[Tr_Intended_Id] AS [Tr_Intended_Id], 
+    [Vw_Employee_Details_Report].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Employee_Details_Report].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Employee_Details_Report].[Year] AS [Year], 
+    [Vw_Employee_Details_Report].[Days] AS [Days], 
+    [Vw_Employee_Details_Report].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Employee_Details_Report].[Traing_Name] AS [Traing_Name], 
+    [Vw_Employee_Details_Report].[Agreed_For_Training] AS [Agreed_For_Training], 
+    [Vw_Employee_Details_Report].[Remarks] AS [Remarks], 
+    [Vw_Employee_Details_Report].[CreatedOn] AS [CreatedOn], 
+    [Vw_Employee_Details_Report].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Employee_Details_Report] AS [Vw_Employee_Details_Report]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_employee_institute" EntityType="Self.vw_employee_institute" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_employee_institute].[Tr_AssignID] AS [Tr_AssignID], 
+    [vw_employee_institute].[FirstName] AS [FirstName], 
+    [vw_employee_institute].[Emaild] AS [Emaild], 
+    [vw_employee_institute].[DesgName] AS [DesgName]
+    FROM [dbo].[vw_employee_institute] AS [vw_employee_institute]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Feedback" EntityType="Self.Vw_Feedback" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Feedback].[Feedback_Id] AS [Feedback_Id], 
+    [Vw_Feedback].[From_Date] AS [From_Date], 
+    [Vw_Feedback].[To_Date] AS [To_Date], 
+    [Vw_Feedback].[Tr_Relevant] AS [Tr_Relevant], 
+    [Vw_Feedback].[Tr_Length] AS [Tr_Length], 
+    [Vw_Feedback].[Tr_Inst_Clear] AS [Tr_Inst_Clear], 
+    [Vw_Feedback].[Trainer_Effective] AS [Trainer_Effective], 
+    [Vw_Feedback].[Tr_Expectation] AS [Tr_Expectation], 
+    [Vw_Feedback].[Tr_Quality] AS [Tr_Quality], 
+    [Vw_Feedback].[Tr_Daily_Work] AS [Tr_Daily_Work], 
+    [Vw_Feedback].[Imp_Dev_Process] AS [Imp_Dev_Process], 
+    [Vw_Feedback].[Explain_Training] AS [Explain_Training], 
+    [Vw_Feedback].[CreatedBy] AS [CreatedBy], 
+    [Vw_Feedback].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Feedback].[Traing_Name] AS [Traing_Name], 
+    [Vw_Feedback].[FirstName] AS [FirstName], 
+    [Vw_Feedback].[Tr_Institute_Id] AS [Tr_Institute_Id], 
+    [Vw_Feedback].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Feedback].[CreatedOn] AS [CreatedOn], 
+    [Vw_Feedback].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Feedback] AS [Vw_Feedback]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Manage_User" EntityType="Self.Vw_Manage_User" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Manage_User].[UserId] AS [UserId], 
+    [Vw_Manage_User].[FirstName] AS [FirstName], 
+    [Vw_Manage_User].[LastName] AS [LastName], 
+    [Vw_Manage_User].[MobileNo] AS [MobileNo], 
+    [Vw_Manage_User].[Emaild] AS [Emaild], 
+    [Vw_Manage_User].[Address] AS [Address], 
+    [Vw_Manage_User].[UserName] AS [UserName], 
+    [Vw_Manage_User].[Password] AS [Password], 
+    [Vw_Manage_User].[CreatedBy] AS [CreatedBy], 
+    [Vw_Manage_User].[CreatedOn] AS [CreatedOn], 
+    [Vw_Manage_User].[Crton] AS [Crton], 
+    [Vw_Manage_User].[UserTypeId] AS [UserTypeId], 
+    [Vw_Manage_User].[UserTypeName] AS [UserTypeName]
+    FROM [dbo].[Vw_Manage_User] AS [Vw_Manage_User]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Training_Assign" EntityType="Self.Vw_Training_Assign" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_Training_Assign].[Traing_Name] AS [Traing_Name], 
+    [Vw_Training_Assign].[Userid] AS [Userid], 
+    [Vw_Training_Assign].[FirstName] AS [FirstName], 
+    [Vw_Training_Assign].[CreatedOn] AS [CreatedOn], 
+    [Vw_Training_Assign].[Crton] AS [Crton]
+    FROM [dbo].[Vw_Training_Assign] AS [Vw_Training_Assign]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_Training_Type" EntityType="Self.Vw_Training_Type" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_Training_Type].[Traing_Type_Id] AS [Traing_Type_Id], 
+    [Vw_Training_Type].[Traing_Name] AS [Traing_Name], 
+    [Vw_Training_Type].[Tr_Address] AS [Tr_Address], 
+    [Vw_Training_Type].[CreatedOn] AS [CreatedOn], 
+    [Vw_Training_Type].[Crton] AS [Crton], 
+    [Vw_Training_Type].[Tr_Institute_Name] AS [Tr_Institute_Name]
+    FROM [dbo].[Vw_Training_Type] AS [Vw_Training_Type]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Vw_User_Training_Assign" EntityType="Self.Vw_User_Training_Assign" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Vw_User_Training_Assign].[Tr_Ass_DetailsID] AS [Tr_Ass_DetailsID], 
+    [Vw_User_Training_Assign].[Tr_AssignID] AS [Tr_AssignID], 
+    [Vw_User_Training_Assign].[Remarks] AS [Remarks], 
+    [Vw_User_Training_Assign].[Trfdate] AS [Trfdate], 
+    [Vw_User_Training_Assign].[Trtdate] AS [Trtdate], 
+    [Vw_User_Training_Assign].[Emaild] AS [Emaild], 
+    [Vw_User_Training_Assign].[Retirement_Date] AS [Retirement_Date], 
+    [Vw_User_Training_Assign].[DesgId] AS [DesgId], 
+    [Vw_User_Training_Assign].[DesgName] AS [DesgName], 
+    [Vw_User_Training_Assign].[Tr_Institute_Name] AS [Tr_Institute_Name], 
+    [Vw_User_Training_Assign].[Traing_Name] AS [Traing_Name], 
+    [Vw_User_Training_Assign].[Userid] AS [Userid], 
+    [Vw_User_Training_Assign].[FirstName] AS [FirstName], 
+    [Vw_User_Training_Assign].[CreatedOn] AS [CreatedOn], 
+    [Vw_User_Training_Assign].[Crton] AS [Crton]
+    FROM [dbo].[Vw_User_Training_Assign] AS [Vw_User_Training_Assign]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TASModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="DesgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Education_Qualfication">
+          <Key>
+            <PropertyRef Name="E_Qual_Id" />
+          </Key>
+          <Property Name="E_Qual_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="E_Qual_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="PostId" />
+          </Key>
+          <Property Name="PostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Training_Catagory">
+          <Key>
+            <PropertyRef Name="Traing_Cata_Id" />
+          </Key>
+          <Property Name="Traing_Cata_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Traing_Id" Type="Int32" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Cata_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Training_Intended">
+          <Key>
+            <PropertyRef Name="Tr_Intended_Id" />
+          </Key>
+          <Property Name="Tr_Intended_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_Intended_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="User_Type">
+          <Key>
+            <PropertyRef Name="UserTypeId" />
+          </Key>
+          <Property Name="UserTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="TASEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Designations" EntityType="Self.Designation" />
+          <EntitySet Name="Education_Qualfication" EntityType="Self.Education_Qualfication" />
+          <EntitySet Name="Posts" EntityType="Self.Post" />
+          <EntitySet Name="Training_Catagory" EntityType="Self.Training_Catagory" />
+          <EntitySet Name="Training_Intended" EntityType="Self.Training_Intended" />
+          <EntitySet Name="User_Type" EntityType="Self.User_Type" />
+          <EntitySet Name="Vw_Manage_User" EntityType="TASModel.Vw_Manage_User" />
+          <EntitySet Name="Training_Institute" EntityType="TASModel.Training_Institute" />
+          <EntitySet Name="Training_Type" EntityType="TASModel.Training_Type" />
+          <EntitySet Name="Vw_Training_Type" EntityType="TASModel.Vw_Training_Type" />
+          <EntitySet Name="Manage_User" EntityType="TASModel.Manage_User" />
+          <EntitySet Name="TAS_Details" EntityType="TASModel.TAS_Details" />
+          <EntitySet Name="Vw_Employee_Details" EntityType="TASModel.Vw_Employee_Details" />
+          <EntitySet Name="Feedbacks" EntityType="TASModel.Feedback" />
+          <EntitySet Name="Vw_Training_Assign" EntityType="TASModel.Vw_Training_Assign" />
+          <EntitySet Name="Vw_Feedback" EntityType="TASModel.Vw_Feedback" />
+          <EntitySet Name="TrainingDetails" EntityType="TASModel.TrainingDetail" />
+          <EntitySet Name="Vw_Admin_Training_Assign" EntityType="TASModel.Vw_Admin_Training_Assign" />
+          <EntitySet Name="TraingAssigns" EntityType="TASModel.TraingAssign" />
+          <EntitySet Name="Vw_Admin_Training_Assign_Details" EntityType="TASModel.Vw_Admin_Training_Assign_Details" />
+          <EntitySet Name="vw_employee_institute" EntityType="TASModel.vw_employee_institute" />
+          <EntitySet Name="Vw_Employee_Details_Report" EntityType="TASModel.Vw_Employee_Details_Report" />
+          <EntitySet Name="TrainingAssignDetails" EntityType="TASModel.TrainingAssignDetail" />
+          <EntitySet Name="Vw_User_Training_Assign" EntityType="TASModel.Vw_User_Training_Assign" />
+        </EntityContainer>
+        <EntityType Name="Vw_Manage_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+          <Property Name="UserTypeId" Type="Int32" />
+          <Property Name="UserTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Training_Institute">
+          <Key>
+            <PropertyRef Name="Tr_Institute_Id" />
+          </Key>
+          <Property Name="Tr_Institute_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Insti_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Training_Type">
+          <Key>
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Vw_Training_Type">
+          <Key>
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Manage_User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="Int32" />
+          <Property Name="Tas_Id" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TAS_Details">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesgId" Type="Int32" />
+          <Property Name="E_Qual_Id" Type="Int32" />
+          <Property Name="PostId" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="Traing_Cata_Id" Type="Int32" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Tr_Intended_Id" Type="Int32" />
+          <Property Name="Tas_User_Id" Type="Int32" />
+          <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+          <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Period_From" Type="DateTime" Precision="3" />
+          <Property Name="Tr_Period_To" Type="DateTime" Precision="3" />
+          <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Vw_Employee_Details">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="Int32" Nullable="false" />
+          <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Retirement_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DesgId" Type="Int32" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Intended_Id" Type="Int32" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_Id" />
+          </Key>
+          <Property Name="Feedback_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="From_Date" Type="DateTime" Precision="3" />
+          <Property Name="To_Date" Type="DateTime" Precision="3" />
+          <Property Name="Tr_Relevant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Inst_Clear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Trainer_Effective" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Expectation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Quality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Daily_Work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Imp_Dev_Process" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Explain_Training" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Vw_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Vw_Feedback">
+          <Key>
+            <PropertyRef Name="Feedback_Id" />
+          </Key>
+          <Property Name="Feedback_Id" Type="Int32" Nullable="false" />
+          <Property Name="From_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="To_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Tr_Relevant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Inst_Clear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Trainer_Effective" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Expectation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Quality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Daily_Work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Imp_Dev_Process" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Explain_Training" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TrainingDetail">
+          <Key>
+            <PropertyRef Name="TraingdeatilsId" />
+          </Key>
+          <Property Name="TraingdeatilsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tas_Id" Type="Int32" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Days" Type="Int32" />
+          <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="Modby" Type="DateTime" Precision="3" />
+          <Property Name="Modon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Vw_Admin_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TraingAssign">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_Institute_Id" Type="Int32" />
+          <Property Name="Traing_Type_Id" Type="Int32" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Trfdate" Type="DateTime" Precision="3" />
+          <Property Name="Trtdate" Type="DateTime" Precision="3" />
+          <Property Name="Is_Status" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Modon" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Vw_Admin_Training_Assign_Details">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+            <PropertyRef Name="Tr_AssignID" />
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" />
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+          <Property Name="DesgId" Type="Int32" Nullable="false" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="vw_employee_institute">
+          <Key>
+            <PropertyRef Name="Tr_AssignID" />
+          </Key>
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Vw_Employee_Details_Report">
+          <Key>
+            <PropertyRef Name="Tas_Id" />
+            <PropertyRef Name="Tr_Institute_Id" />
+            <PropertyRef Name="Traing_Type_Id" />
+          </Key>
+          <Property Name="Tas_Id" Type="Int32" Nullable="false" />
+          <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Retirement_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DesgId" Type="Int32" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Intended_Id" Type="Int32" />
+          <Property Name="Tr_Institute_Id" Type="Int32" Nullable="false" />
+          <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Days" Type="Int32" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TrainingAssignDetail">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tr_AssignID" Type="Int32" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="IsVisible" Type="Boolean" />
+          <Property Name="IsEmail" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Vw_User_Training_Assign">
+          <Key>
+            <PropertyRef Name="Tr_Ass_DetailsID" />
+            <PropertyRef Name="Tr_AssignID" />
+            <PropertyRef Name="DesgId" />
+          </Key>
+          <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" />
+          <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+          <Property Name="DesgId" Type="Int32" Nullable="false" />
+          <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Crton" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TASModelStoreContainer" CdmEntityContainer="TASEntities">
+          <EntitySetMapping Name="Designations">
+            <EntityTypeMapping TypeName="TASModel.Designation">
+              <MappingFragment StoreEntitySet="Designation">
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Education_Qualfication">
+            <EntityTypeMapping TypeName="TASModel.Education_Qualfication">
+              <MappingFragment StoreEntitySet="Education_Qualfication">
+                <ScalarProperty Name="E_Qual_Id" ColumnName="E_Qual_Id" />
+                <ScalarProperty Name="E_Qual_Name" ColumnName="E_Qual_Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="TASModel.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="PostName" ColumnName="PostName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Training_Catagory">
+            <EntityTypeMapping TypeName="TASModel.Training_Catagory">
+              <MappingFragment StoreEntitySet="Training_Catagory">
+                <ScalarProperty Name="Traing_Cata_Id" ColumnName="Traing_Cata_Id" />
+                <ScalarProperty Name="Traing_Id" ColumnName="Traing_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Traing_Cata_Name" ColumnName="Traing_Cata_Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Training_Intended">
+            <EntityTypeMapping TypeName="TASModel.Training_Intended">
+              <MappingFragment StoreEntitySet="Training_Intended">
+                <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+                <ScalarProperty Name="Tr_Intended_Name" ColumnName="Tr_Intended_Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Type">
+            <EntityTypeMapping TypeName="TASModel.User_Type">
+              <MappingFragment StoreEntitySet="User_Type">
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Manage_User">
+            <EntityTypeMapping TypeName="TASModel.Vw_Manage_User">
+              <MappingFragment StoreEntitySet="Vw_Manage_User">
+                <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Training_Institute">
+            <EntityTypeMapping TypeName="TASModel.Training_Institute">
+              <MappingFragment StoreEntitySet="Training_Institute">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Insti_Type" ColumnName="Insti_Type" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Training_Type">
+            <EntityTypeMapping TypeName="TASModel.Training_Type">
+              <MappingFragment StoreEntitySet="Training_Type">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Tr_Address" ColumnName="Tr_Address" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Training_Type">
+            <EntityTypeMapping TypeName="TASModel.Vw_Training_Type">
+              <MappingFragment StoreEntitySet="Vw_Training_Type">
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Tr_Address" ColumnName="Tr_Address" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Manage_User">
+            <EntityTypeMapping TypeName="TASModel.Manage_User">
+              <MappingFragment StoreEntitySet="Manage_User">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAS_Details">
+            <EntityTypeMapping TypeName="TASModel.TAS_Details">
+              <MappingFragment StoreEntitySet="TAS_Details">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+                <ScalarProperty Name="Tr_Period_To" ColumnName="Tr_Period_To" />
+                <ScalarProperty Name="Tr_Period_From" ColumnName="Tr_Period_From" />
+                <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+                <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+                <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+                <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+                <ScalarProperty Name="Tas_User_Id" ColumnName="Tas_User_Id" />
+                <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Traing_Cata_Id" ColumnName="Traing_Cata_Id" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="PostId" ColumnName="PostId" />
+                <ScalarProperty Name="E_Qual_Id" ColumnName="E_Qual_Id" />
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Employee_Details">
+            <EntityTypeMapping TypeName="TASModel.Vw_Employee_Details">
+              <MappingFragment StoreEntitySet="Vw_Employee_Details">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+                <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+                <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+                <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+                <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedbacks">
+            <EntityTypeMapping TypeName="TASModel.Feedback">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Explain_Training" ColumnName="Explain_Training" />
+                <ScalarProperty Name="Imp_Dev_Process" ColumnName="Imp_Dev_Process" />
+                <ScalarProperty Name="Tr_Daily_Work" ColumnName="Tr_Daily_Work" />
+                <ScalarProperty Name="Tr_Quality" ColumnName="Tr_Quality" />
+                <ScalarProperty Name="Tr_Expectation" ColumnName="Tr_Expectation" />
+                <ScalarProperty Name="Trainer_Effective" ColumnName="Trainer_Effective" />
+                <ScalarProperty Name="Tr_Inst_Clear" ColumnName="Tr_Inst_Clear" />
+                <ScalarProperty Name="Tr_Length" ColumnName="Tr_Length" />
+                <ScalarProperty Name="Tr_Relevant" ColumnName="Tr_Relevant" />
+                <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+                <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Feedback_Id" ColumnName="Feedback_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Training_Assign">
+            <EntityTypeMapping TypeName="TASModel.Vw_Training_Assign">
+              <MappingFragment StoreEntitySet="Vw_Training_Assign">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+                <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Feedback">
+            <EntityTypeMapping TypeName="TASModel.Vw_Feedback">
+              <MappingFragment StoreEntitySet="Vw_Feedback">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Explain_Training" ColumnName="Explain_Training" />
+                <ScalarProperty Name="Imp_Dev_Process" ColumnName="Imp_Dev_Process" />
+                <ScalarProperty Name="Tr_Daily_Work" ColumnName="Tr_Daily_Work" />
+                <ScalarProperty Name="Tr_Quality" ColumnName="Tr_Quality" />
+                <ScalarProperty Name="Tr_Expectation" ColumnName="Tr_Expectation" />
+                <ScalarProperty Name="Trainer_Effective" ColumnName="Trainer_Effective" />
+                <ScalarProperty Name="Tr_Inst_Clear" ColumnName="Tr_Inst_Clear" />
+                <ScalarProperty Name="Tr_Length" ColumnName="Tr_Length" />
+                <ScalarProperty Name="Tr_Relevant" ColumnName="Tr_Relevant" />
+                <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+                <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+                <ScalarProperty Name="Feedback_Id" ColumnName="Feedback_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrainingDetails">
+            <EntityTypeMapping TypeName="TASModel.TrainingDetail">
+              <MappingFragment StoreEntitySet="TrainingDetails">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Modon" ColumnName="Modon" />
+                <ScalarProperty Name="Modby" ColumnName="Modby" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+                <ScalarProperty Name="TraingdeatilsId" ColumnName="TraingdeatilsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Admin_Training_Assign">
+            <EntityTypeMapping TypeName="TASModel.Vw_Admin_Training_Assign">
+              <MappingFragment StoreEntitySet="Vw_Admin_Training_Assign">
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+                <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraingAssigns">
+            <EntityTypeMapping TypeName="TASModel.TraingAssign">
+              <MappingFragment StoreEntitySet="TraingAssign">
+                <ScalarProperty Name="Modon" ColumnName="Modon" />
+                <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Is_Status" ColumnName="Is_Status" />
+                <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+                <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Admin_Training_Assign_Details">
+            <EntityTypeMapping TypeName="TASModel.Vw_Admin_Training_Assign_Details">
+              <MappingFragment StoreEntitySet="Vw_Admin_Training_Assign_Details">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+                <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+                <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_employee_institute">
+            <EntityTypeMapping TypeName="TASModel.vw_employee_institute">
+              <MappingFragment StoreEntitySet="vw_employee_institute">
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_Employee_Details_Report">
+            <EntityTypeMapping TypeName="TASModel.Vw_Employee_Details_Report">
+              <MappingFragment StoreEntitySet="Vw_Employee_Details_Report">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+                <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+                <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+                <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+                <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+                <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+                <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrainingAssignDetails">
+            <EntityTypeMapping TypeName="TASModel.TrainingAssignDetail">
+              <MappingFragment StoreEntitySet="TrainingAssignDetails">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsEmail" ColumnName="IsEmail" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+                <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vw_User_Training_Assign">
+            <EntityTypeMapping TypeName="TASModel.Vw_User_Training_Assign">
+              <MappingFragment StoreEntitySet="Vw_User_Training_Assign">
+                <ScalarProperty Name="Crton" ColumnName="Crton" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+                <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+                <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+                <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+                <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+                <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+                <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+                <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+                <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

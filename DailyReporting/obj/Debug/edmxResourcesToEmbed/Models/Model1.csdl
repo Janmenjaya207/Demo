@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TASModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="DesgId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Education_Qualfication">
+    <Key>
+      <PropertyRef Name="E_Qual_Id" />
+    </Key>
+    <Property Name="E_Qual_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="E_Qual_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostId" />
+    </Key>
+    <Property Name="PostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Training_Catagory">
+    <Key>
+      <PropertyRef Name="Traing_Cata_Id" />
+    </Key>
+    <Property Name="Traing_Cata_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Traing_Id" Type="Int32" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Cata_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Training_Intended">
+    <Key>
+      <PropertyRef Name="Tr_Intended_Id" />
+    </Key>
+    <Property Name="Tr_Intended_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_Intended_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="User_Type">
+    <Key>
+      <PropertyRef Name="UserTypeId" />
+    </Key>
+    <Property Name="UserTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="TASEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Designations" EntityType="Self.Designation" />
+    <EntitySet Name="Education_Qualfication" EntityType="Self.Education_Qualfication" />
+    <EntitySet Name="Posts" EntityType="Self.Post" />
+    <EntitySet Name="Training_Catagory" EntityType="Self.Training_Catagory" />
+    <EntitySet Name="Training_Intended" EntityType="Self.Training_Intended" />
+    <EntitySet Name="User_Type" EntityType="Self.User_Type" />
+    <EntitySet Name="Vw_Manage_User" EntityType="TASModel.Vw_Manage_User" />
+    <EntitySet Name="Training_Institute" EntityType="TASModel.Training_Institute" />
+    <EntitySet Name="Training_Type" EntityType="TASModel.Training_Type" />
+    <EntitySet Name="Vw_Training_Type" EntityType="TASModel.Vw_Training_Type" />
+    <EntitySet Name="Manage_User" EntityType="TASModel.Manage_User" />
+    <EntitySet Name="TAS_Details" EntityType="TASModel.TAS_Details" />
+    <EntitySet Name="Vw_Employee_Details" EntityType="TASModel.Vw_Employee_Details" />
+    <EntitySet Name="Feedbacks" EntityType="TASModel.Feedback" />
+    <EntitySet Name="Vw_Training_Assign" EntityType="TASModel.Vw_Training_Assign" />
+    <EntitySet Name="Vw_Feedback" EntityType="TASModel.Vw_Feedback" />
+    <EntitySet Name="TrainingDetails" EntityType="TASModel.TrainingDetail" />
+    <EntitySet Name="Vw_Admin_Training_Assign" EntityType="TASModel.Vw_Admin_Training_Assign" />
+    <EntitySet Name="TraingAssigns" EntityType="TASModel.TraingAssign" />
+    <EntitySet Name="Vw_Admin_Training_Assign_Details" EntityType="TASModel.Vw_Admin_Training_Assign_Details" />
+    <EntitySet Name="vw_employee_institute" EntityType="TASModel.vw_employee_institute" />
+    <EntitySet Name="Vw_Employee_Details_Report" EntityType="TASModel.Vw_Employee_Details_Report" />
+    <EntitySet Name="TrainingAssignDetails" EntityType="TASModel.TrainingAssignDetail" />
+    <EntitySet Name="Vw_User_Training_Assign" EntityType="TASModel.Vw_User_Training_Assign" />
+  </EntityContainer>
+  <EntityType Name="Vw_Manage_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="UserTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Training_Institute">
+    <Key>
+      <PropertyRef Name="Tr_Institute_Id" />
+    </Key>
+    <Property Name="Tr_Institute_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Insti_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Training_Type">
+    <Key>
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Vw_Training_Type">
+    <Key>
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Manage_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserTypeId" Type="Int32" />
+    <Property Name="Tas_Id" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TAS_Details">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesgId" Type="Int32" />
+    <Property Name="E_Qual_Id" Type="Int32" />
+    <Property Name="PostId" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="Traing_Cata_Id" Type="Int32" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Tr_Intended_Id" Type="Int32" />
+    <Property Name="Tas_User_Id" Type="Int32" />
+    <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+    <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Period_From" Type="DateTime" Precision="3" />
+    <Property Name="Tr_Period_To" Type="DateTime" Precision="3" />
+    <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Vw_Employee_Details">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="Int32" Nullable="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Retirement_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DesgId" Type="Int32" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Intended_Id" Type="Int32" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="Feedback_Id" />
+    </Key>
+    <Property Name="Feedback_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="From_Date" Type="DateTime" Precision="3" />
+    <Property Name="To_Date" Type="DateTime" Precision="3" />
+    <Property Name="Tr_Relevant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Inst_Clear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trainer_Effective" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Expectation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Quality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Daily_Work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Imp_Dev_Process" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Explain_Training" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Vw_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vw_Feedback">
+    <Key>
+      <PropertyRef Name="Feedback_Id" />
+    </Key>
+    <Property Name="Feedback_Id" Type="Int32" Nullable="false" />
+    <Property Name="From_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="To_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Tr_Relevant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Inst_Clear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Trainer_Effective" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Expectation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Quality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Daily_Work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Imp_Dev_Process" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Explain_Training" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TrainingDetail">
+    <Key>
+      <PropertyRef Name="TraingdeatilsId" />
+    </Key>
+    <Property Name="TraingdeatilsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tas_Id" Type="Int32" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Days" Type="Int32" />
+    <Property Name="Createdby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="Modby" Type="DateTime" Precision="3" />
+    <Property Name="Modon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Vw_Admin_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TraingAssign">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_Institute_Id" Type="Int32" />
+    <Property Name="Traing_Type_Id" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trfdate" Type="DateTime" Precision="3" />
+    <Property Name="Trtdate" Type="DateTime" Precision="3" />
+    <Property Name="Is_Status" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Modon" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vw_Admin_Training_Assign_Details">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+      <PropertyRef Name="Tr_AssignID" />
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" />
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+    <Property Name="DesgId" Type="Int32" Nullable="false" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_employee_institute">
+    <Key>
+      <PropertyRef Name="Tr_AssignID" />
+    </Key>
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Vw_Employee_Details_Report">
+    <Key>
+      <PropertyRef Name="Tas_Id" />
+      <PropertyRef Name="Tr_Institute_Id" />
+      <PropertyRef Name="Traing_Type_Id" />
+    </Key>
+    <Property Name="Tas_Id" Type="Int32" Nullable="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Retirement_Date" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Prv_Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Present_Post" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Edu_Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DesgId" Type="Int32" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Intended_details" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Intended_Id" Type="Int32" />
+    <Property Name="Tr_Institute_Id" Type="Int32" Nullable="false" />
+    <Property Name="Traing_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Days" Type="Int32" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Agreed_For_Training" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TrainingAssignDetail">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tr_AssignID" Type="Int32" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="IsVisible" Type="Boolean" />
+    <Property Name="IsEmail" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Vw_User_Training_Assign">
+    <Key>
+      <PropertyRef Name="Tr_Ass_DetailsID" />
+      <PropertyRef Name="Tr_AssignID" />
+      <PropertyRef Name="DesgId" />
+    </Key>
+    <Property Name="Tr_Ass_DetailsID" Type="Int32" Nullable="false" />
+    <Property Name="Tr_AssignID" Type="Int32" Nullable="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Trfdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Trtdate" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Emaild" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Retirement_Date" Type="DateTime" Precision="3" />
+    <Property Name="DesgId" Type="Int32" Nullable="false" />
+    <Property Name="DesgName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Tr_Institute_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Traing_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Crton" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

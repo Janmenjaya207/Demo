@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TASModelStoreContainer" CdmEntityContainer="TASEntities">
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="TASModel.Designation">
+        <MappingFragment StoreEntitySet="Designation">
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Education_Qualfication">
+      <EntityTypeMapping TypeName="TASModel.Education_Qualfication">
+        <MappingFragment StoreEntitySet="Education_Qualfication">
+          <ScalarProperty Name="E_Qual_Id" ColumnName="E_Qual_Id" />
+          <ScalarProperty Name="E_Qual_Name" ColumnName="E_Qual_Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="TASModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Training_Catagory">
+      <EntityTypeMapping TypeName="TASModel.Training_Catagory">
+        <MappingFragment StoreEntitySet="Training_Catagory">
+          <ScalarProperty Name="Traing_Cata_Id" ColumnName="Traing_Cata_Id" />
+          <ScalarProperty Name="Traing_Id" ColumnName="Traing_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Traing_Cata_Name" ColumnName="Traing_Cata_Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Training_Intended">
+      <EntityTypeMapping TypeName="TASModel.Training_Intended">
+        <MappingFragment StoreEntitySet="Training_Intended">
+          <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+          <ScalarProperty Name="Tr_Intended_Name" ColumnName="Tr_Intended_Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Type">
+      <EntityTypeMapping TypeName="TASModel.User_Type">
+        <MappingFragment StoreEntitySet="User_Type">
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Manage_User">
+      <EntityTypeMapping TypeName="TASModel.Vw_Manage_User">
+        <MappingFragment StoreEntitySet="Vw_Manage_User">
+          <ScalarProperty Name="UserTypeName" ColumnName="UserTypeName" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Training_Institute">
+      <EntityTypeMapping TypeName="TASModel.Training_Institute">
+        <MappingFragment StoreEntitySet="Training_Institute">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Insti_Type" ColumnName="Insti_Type" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Training_Type">
+      <EntityTypeMapping TypeName="TASModel.Training_Type">
+        <MappingFragment StoreEntitySet="Training_Type">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Tr_Address" ColumnName="Tr_Address" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Training_Type">
+      <EntityTypeMapping TypeName="TASModel.Vw_Training_Type">
+        <MappingFragment StoreEntitySet="Vw_Training_Type">
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Tr_Address" ColumnName="Tr_Address" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manage_User">
+      <EntityTypeMapping TypeName="TASModel.Manage_User">
+        <MappingFragment StoreEntitySet="Manage_User">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+          <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TAS_Details">
+      <EntityTypeMapping TypeName="TASModel.TAS_Details">
+        <MappingFragment StoreEntitySet="TAS_Details">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+          <ScalarProperty Name="Tr_Period_To" ColumnName="Tr_Period_To" />
+          <ScalarProperty Name="Tr_Period_From" ColumnName="Tr_Period_From" />
+          <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+          <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+          <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+          <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+          <ScalarProperty Name="Tas_User_Id" ColumnName="Tas_User_Id" />
+          <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Traing_Cata_Id" ColumnName="Traing_Cata_Id" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="E_Qual_Id" ColumnName="E_Qual_Id" />
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Employee_Details">
+      <EntityTypeMapping TypeName="TASModel.Vw_Employee_Details">
+        <MappingFragment StoreEntitySet="Vw_Employee_Details">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+          <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+          <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+          <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+          <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="TASModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Explain_Training" ColumnName="Explain_Training" />
+          <ScalarProperty Name="Imp_Dev_Process" ColumnName="Imp_Dev_Process" />
+          <ScalarProperty Name="Tr_Daily_Work" ColumnName="Tr_Daily_Work" />
+          <ScalarProperty Name="Tr_Quality" ColumnName="Tr_Quality" />
+          <ScalarProperty Name="Tr_Expectation" ColumnName="Tr_Expectation" />
+          <ScalarProperty Name="Trainer_Effective" ColumnName="Trainer_Effective" />
+          <ScalarProperty Name="Tr_Inst_Clear" ColumnName="Tr_Inst_Clear" />
+          <ScalarProperty Name="Tr_Length" ColumnName="Tr_Length" />
+          <ScalarProperty Name="Tr_Relevant" ColumnName="Tr_Relevant" />
+          <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+          <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Feedback_Id" ColumnName="Feedback_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Training_Assign">
+      <EntityTypeMapping TypeName="TASModel.Vw_Training_Assign">
+        <MappingFragment StoreEntitySet="Vw_Training_Assign">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+          <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Feedback">
+      <EntityTypeMapping TypeName="TASModel.Vw_Feedback">
+        <MappingFragment StoreEntitySet="Vw_Feedback">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Explain_Training" ColumnName="Explain_Training" />
+          <ScalarProperty Name="Imp_Dev_Process" ColumnName="Imp_Dev_Process" />
+          <ScalarProperty Name="Tr_Daily_Work" ColumnName="Tr_Daily_Work" />
+          <ScalarProperty Name="Tr_Quality" ColumnName="Tr_Quality" />
+          <ScalarProperty Name="Tr_Expectation" ColumnName="Tr_Expectation" />
+          <ScalarProperty Name="Trainer_Effective" ColumnName="Trainer_Effective" />
+          <ScalarProperty Name="Tr_Inst_Clear" ColumnName="Tr_Inst_Clear" />
+          <ScalarProperty Name="Tr_Length" ColumnName="Tr_Length" />
+          <ScalarProperty Name="Tr_Relevant" ColumnName="Tr_Relevant" />
+          <ScalarProperty Name="To_Date" ColumnName="To_Date" />
+          <ScalarProperty Name="From_Date" ColumnName="From_Date" />
+          <ScalarProperty Name="Feedback_Id" ColumnName="Feedback_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrainingDetails">
+      <EntityTypeMapping TypeName="TASModel.TrainingDetail">
+        <MappingFragment StoreEntitySet="TrainingDetails">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Modon" ColumnName="Modon" />
+          <ScalarProperty Name="Modby" ColumnName="Modby" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+          <ScalarProperty Name="TraingdeatilsId" ColumnName="TraingdeatilsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Admin_Training_Assign">
+      <EntityTypeMapping TypeName="TASModel.Vw_Admin_Training_Assign">
+        <MappingFragment StoreEntitySet="Vw_Admin_Training_Assign">
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+          <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TraingAssigns">
+      <EntityTypeMapping TypeName="TASModel.TraingAssign">
+        <MappingFragment StoreEntitySet="TraingAssign">
+          <ScalarProperty Name="Modon" ColumnName="Modon" />
+          <ScalarProperty Name="ModBy" ColumnName="ModBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Is_Status" ColumnName="Is_Status" />
+          <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+          <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Admin_Training_Assign_Details">
+      <EntityTypeMapping TypeName="TASModel.Vw_Admin_Training_Assign_Details">
+        <MappingFragment StoreEntitySet="Vw_Admin_Training_Assign_Details">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+          <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+          <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_employee_institute">
+      <EntityTypeMapping TypeName="TASModel.vw_employee_institute">
+        <MappingFragment StoreEntitySet="vw_employee_institute">
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Employee_Details_Report">
+      <EntityTypeMapping TypeName="TASModel.Vw_Employee_Details_Report">
+        <MappingFragment StoreEntitySet="Vw_Employee_Details_Report">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Agreed_For_Training" ColumnName="Agreed_For_Training" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Traing_Type_Id" ColumnName="Traing_Type_Id" />
+          <ScalarProperty Name="Tr_Institute_Id" ColumnName="Tr_Institute_Id" />
+          <ScalarProperty Name="Tr_Intended_Id" ColumnName="Tr_Intended_Id" />
+          <ScalarProperty Name="Tr_Intended_details" ColumnName="Tr_Intended_details" />
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="Edu_Qualification" ColumnName="Edu_Qualification" />
+          <ScalarProperty Name="Present_Post" ColumnName="Present_Post" />
+          <ScalarProperty Name="Prv_Assignment" ColumnName="Prv_Assignment" />
+          <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Tas_Id" ColumnName="Tas_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrainingAssignDetails">
+      <EntityTypeMapping TypeName="TASModel.TrainingAssignDetail">
+        <MappingFragment StoreEntitySet="TrainingAssignDetails">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsEmail" ColumnName="IsEmail" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+          <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_User_Training_Assign">
+      <EntityTypeMapping TypeName="TASModel.Vw_User_Training_Assign">
+        <MappingFragment StoreEntitySet="Vw_User_Training_Assign">
+          <ScalarProperty Name="Crton" ColumnName="Crton" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Traing_Name" ColumnName="Traing_Name" />
+          <ScalarProperty Name="Tr_Institute_Name" ColumnName="Tr_Institute_Name" />
+          <ScalarProperty Name="DesgName" ColumnName="DesgName" />
+          <ScalarProperty Name="DesgId" ColumnName="DesgId" />
+          <ScalarProperty Name="Retirement_Date" ColumnName="Retirement_Date" />
+          <ScalarProperty Name="Emaild" ColumnName="Emaild" />
+          <ScalarProperty Name="Trtdate" ColumnName="Trtdate" />
+          <ScalarProperty Name="Trfdate" ColumnName="Trfdate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Tr_AssignID" ColumnName="Tr_AssignID" />
+          <ScalarProperty Name="Tr_Ass_DetailsID" ColumnName="Tr_Ass_DetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
